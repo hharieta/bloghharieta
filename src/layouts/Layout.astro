@@ -3,7 +3,7 @@ import '@fontsource/m-plus-rounded-1c/400.css';
 import '@fontsource/m-plus-rounded-1c/700.css';
 import '@fontsource/m-plus-rounded-1c/800.css';
 import '@fontsource/m-plus-rounded-1c/900.css';
-import '@fontsource-variable/inter';
+import '@fontsource/handlee';
 import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
@@ -71,17 +71,18 @@ const makeTitle = title
       img {
         content-visibility: auto;
       }
-      h1, h2, h3, h4{
+      h1, h2{
         font-family: 'M PLUS Rounded 1c', sans-serif;
         font-weight: bold;
       }
+      h3 {
+        font-family: "Handlee", sans-serif;
+      }
+      p {
+        font-family: 'Bricolage Grotesque', sans-serif;}
       .font-mplus{
         font-family: 'M PLUS Rounded 1c', sans-serif;
       }
-      .font-inter{
-        font-family: 'Inter', sans-serif;
-      }
-
     </style>
   </body>
 </html>

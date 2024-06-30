@@ -23,6 +23,9 @@ importers:
       '@fontsource-variable/inter':
         specifier: ^5.0.18
         version: 5.0.18
+      '@fontsource/handlee':
+        specifier: ^5.0.19
+        version: 5.0.19
       '@fontsource/m-plus-rounded-1c':
         specifier: ^5.0.13
         version: 5.0.13
@@ -397,6 +400,9 @@ packages:
 
   '@fontsource-variable/inter@5.0.18':
     resolution: {integrity: sha512-rJzSrtJ3b7djiGFvRuTe6stDfbYJGhdQSfn2SI2WfXviee7Er0yKAHE5u7FU7OWVQQQ1x3+cxdmx9NdiAkcrcA==}
+
+  '@fontsource/handlee@5.0.19':
+    resolution: {integrity: sha512-79BMRW0jY7/7g2rwpbcuxju3L/P/I28gRmM1OiP5M6qO0LdnBo7n3Ay+f430dlBw6Ao1nMlLolT+YHimrNt+dQ==}
 
   '@fontsource/m-plus-rounded-1c@5.0.13':
     resolution: {integrity: sha512-SOSYbcnSDWKf/Fvom5H+/xqluLB7N508XhaUffg0QUR6cjnEVYwqL6yZGQ7d0AgdvmCxHEstq3Wm4GcaMrcH+w==}
@@ -2916,6 +2922,8 @@ snapshots:
   '@fontsource-variable/bricolage-grotesque@5.0.6': {}
 
   '@fontsource-variable/inter@5.0.18': {}
+
+  '@fontsource/handlee@5.0.19': {}
 
   '@fontsource/m-plus-rounded-1c@5.0.13': {}
 

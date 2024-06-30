@@ -16,6 +16,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource-variable/bricolage-grotesque": "^5.0.6",
     "@fontsource-variable/inter": "^5.0.18",
+    "@fontsource/handlee": "^5.0.19",
     "@fontsource/m-plus-rounded-1c": "^5.0.13",
     "@iconify-json/bx": "^1.1.10",
     "@iconify-json/simple-icons": "^1.1.102",

@@ -42,6 +42,37 @@ const features = [
 ];
 ---
 
+<section class="my-5">
+  <div class="mt-1 md:mt-0">
+    <h2 class="text-4xl md:text-xl lg:text-5xl font-bold lg:tracking-tight">
+      Inge Gatovsky
+    </h2>
+    <h3 class="italic text-2xl text-zinc-900 md:text-xl lg:text-4xl xl:text-5xl font-bold lg:tracking-tight xl:tracking-tighter">
+      "the best breaking production"
+    </h3>
+    <p class="text-xl text-justify mt-4 text-slate-600">
+      Do you want to know more about me? <br/>
+      I´m a Cloud Engineer with a passion for technology and innovation. <br/>
+      Therefore, I write code 💻 and cheap love poems 🩷.
+    </p>
+  </div>
+  
+  <!-- <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+    {
+      features.map((item) => (
+        <div class="flex gap-4 items-start">
+          <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+            <Icon class="text-white" name={item.icon} />
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div> -->
+</section>
 <section class="container1">
   <article class="container-cards">
       <div class="cards1">
@@ -75,32 +106,4 @@ const features = [
       </div>
   </article>
   <script src="../scripts/cards.js"></script>
-</section>
-
-<section class="my-10">
-  <div class="mt-16 md:mt-0">
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-      Everything you need to start a website
-    </h2>
-    <p class="text-lg mt-4 text-slate-600">
-      Astro comes batteries included. It takes the best parts of state-of-the-art
-      tools and adds its own innovations.
-    </p>
-  </div>
-  
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-    {
-      features.map((item) => (
-        <div class="flex gap-4 items-start">
-          <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-            <Icon class="text-white" name={item.icon} />
-          </div>
-          <div>
-            <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-          </div>
-        </div>
-      ))
-    }
-  </div>
 </section>
