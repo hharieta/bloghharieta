@@ -1,0 +1,58 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "assets/gatovsky.webp";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 hidden md:block rounded-ms">
+    <Picture
+      src={heroImage}
+      alt="Inge Gatovsky"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+      style={{ 
+        borderRadius: "40% 80% 80% 40% / 40% 40% 80% 80%",
+        // clipPath: "ellipse(80% 50% at 30% 50%)",
+        overflow: "hidden",
+       }}
+    />
+  </div>
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Inge Gatovsky - Cloud Engineer
+    </h1>
+    <p class="text-justify text-lg mt-4 text-slate-600 max-w-xl">
+      It´s me, Inge Gatovsky, a Cloud Engineer with a passion for technology and
+      innovation. I´m a big fan of the cloud and all the possibilities it offers.
+      Pythonist, Linux and Docker. <br/> I´m always looking for new
+      challenges and opportunities to learn new things.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link
+        href="#"
+        href="mailto:"
+        target="_blank"
+        class="flex gap-1 items-center justify-center"
+        rel="noopener">
+        <Icon class="font-mplus text-white w-5 h-5" name="bx:bx-at" />
+         Contact Me
+      </Link>
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="https://github.com/hharieta"
+        class="flex gap-1 items-center justify-center"
+        target="_blank">
+        <Icon class="font-mplus text-black w-4 h-4" name="bx:bxl-github" />
+        GitHub Repo
+      </Link>
+    </div>
+  </div>
+</main>

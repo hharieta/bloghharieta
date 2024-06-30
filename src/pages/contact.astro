@@ -1,0 +1,40 @@
+---
+import Contactform from "@components/contactform.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout title="Contact">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Contact</Fragment>
+      <Fragment slot="desc"> 😻 </Fragment>
+    </Sectionhead>
+
+    <div class="text-justify grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl text-gray-800">Contact Inge Gatovsky</h2>
+        <p class="text-lg leading-relaxed text-slate-500 mt-3">
+          Have something to say? Your friendly neighborhood Gatovsky is here to help. Fill up the form or send
+          email.
+        </p>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+            <span>Centro Benito Juarez, CUN 77500</span>
+          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" />
+            <a href="mailto:&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#111;&#64;&#104;&#104;&#97;&#114;&#105;&#101;&#116;&#97;&#46;&#108;&#97;&#116;">
+              &#99;&#111;&#110;&#116;&#97;&#99;&#116;&#111;&#64;&#104;&#104;&#97;&#114;&#105;&#101;&#116;&#97;&#46;&#108;&#97;&#116;
+            </a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <Contactform />
+      </div>
+    </div>
+  </Container>
+</Layout>

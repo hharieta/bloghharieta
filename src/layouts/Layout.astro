@@ -1,0 +1,87 @@
+---
+import '@fontsource/m-plus-rounded-1c/400.css';
+import '@fontsource/m-plus-rounded-1c/700.css';
+import '@fontsource/m-plus-rounded-1c/800.css';
+import '@fontsource/m-plus-rounded-1c/900.css';
+import '@fontsource-variable/inter';
+import { SEO } from "astro-seo";
+import Footer from "@components/footer.astro";
+import Navbar from "@components/navbar/navbar.astro";
+import "@fontsource-variable/inter/index.css";
+import '@fontsource-variable/bricolage-grotesque';
+import '../styles/carousel.css';
+import '../styles/cards.css';
+
+
+export interface Props {
+  title: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const resolvedImageWithDomain = new URL(
+  "/opengraph.jpg",
+  Astro.site
+).toString();
+
+const { title } = Astro.props;
+
+const makeTitle = title
+  ? title + " | " + "Inge Gatovsky"
+  : "Inge Gatovsky - Cloud Engineer";
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
+    <SEO
+      title={makeTitle}
+      description="Personal Blog"
+      canonical={canonicalURL}
+      twitter={{
+        creator: "@inge.gatovsky",
+        site: "@inge.gativsky",
+        card: "summary_large_image",
+      }}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: `Inge Gatovsky - Cloud Engineer`,
+          image: resolvedImageWithDomain,
+        },
+        image: {
+          alt: "Gatovsky Home page",
+        },
+      }}
+    />
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+    <Footer />
+    <style is:global>
+      /* Improve Page speed */
+      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+      img {
+        content-visibility: auto;
+      }
+      h1, h2, h3, h4{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: bold;
+      }
+      .font-mplus{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+      }
+      .font-inter{
+        font-family: 'Inter', sans-serif;
+      }
+
+    </style>
+  </body>
+</html>
