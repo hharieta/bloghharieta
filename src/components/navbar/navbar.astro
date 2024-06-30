@@ -3,10 +3,10 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
-import { getImage } from "astro:assets";
-import logoPath from "../../assets/gatovsky.svg";
+// import { getImage } from "astro:assets";
+// import logoPath from "../../assets/gatovsky.svg";
 
-const logo = await getImage({ src: logoPath, format: "image/svg+xml" });
+// const logo = await getImage({ src: logoPath, format: "image/svg+xml" });
 
 const menuitems = [
   {
@@ -41,9 +41,9 @@ const menuitems = [
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/">
           <img
-          src={logo.src}
+          src="/images/gatovsky.svg"
           alt="Inge Gatovsky"
-          class="w-8 h-8 lg:w-10 lg:h-10"
+          class="w-10 h-10 lg:w-12 lg:h-12"
         />
         </a>
         <div class="block lg:hidden">
