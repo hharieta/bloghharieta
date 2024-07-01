@@ -10,27 +10,30 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
   {
-    title: "Features",
+    title: "Gallery",
     path: "#",
     children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
+      { title: "Projects", path: "https://www.hharieta.lat/works", target: "_blank" },
+      { title: "Hobby", path: "#", target: "_self"},
+      { title: "Curriculum Vitae", path: "https://www.hharieta.lat/", target: "_blank"},
+      { title: "Social media", path: "/404", target: "_parent" },
     ],
     badge: "New"
   },
   {
     title: "About",
     path: "/about",
+    target: "_self"
   },
   {
     title: "Blog",
     path: "/blog",
+    target: "_self"
   },
   {
     title: "Contact",
     path: "/contact",
+    target: "_self"
   }
 ];
 ---
@@ -67,6 +70,7 @@ const menuitems = [
                   <li>
                     <a
                       href={item.path}
+                      target={item.target ? item.target : "_self"}
                       class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
                       <span> {item.title}</span>
                       {item.badge && (
