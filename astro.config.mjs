@@ -6,6 +6,6 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://blog.hharieta.lat",
+  site: "https://www.hharieta.lat",
   integrations: [tailwind(), mdx(), sitemap(), icon()],
 });
