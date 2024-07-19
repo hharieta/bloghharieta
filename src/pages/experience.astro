@@ -1,24 +1,19 @@
 ---
-import { getCollection } from "astro:content";
-import { Picture } from "astro:assets";
+
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
 
 import cv from "@cv";
 import ExperienceCard from "@components/experiencecard.astro";
 import EducationCard from "@components/educationcard.astro";
 import AwardsCard from "@components/awardscard.astro";
+import GridCourse from '@components/gridcourse.astro'
 const { basics } = cv;
 const { experience } = basics;
 const { education } = basics;
 const { awards } = basics;
+const { courses } = basics;
 
-
-// Filter team entries with 'draft: false' & date before current date
-const publishedTeamMembers = await getCollection("team", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
-});
 ---
 
 <Layout title="Experience">
@@ -66,6 +61,20 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   </div>
   <div class="flex flex-col pointer-events-auto">
     {awards.map((awd) => <AwardsCard {...awd} />)}
+  </div>
+  <div
+    class="w-full max-w-2xl flex flex-col justify-center items-start sm:items-center gap-3"
+  >
+    <h2
+      class="text-4xl sm:text-lg md:text-2xl tracking-tighter"
+    >
+      Courses
+    </h2>
+  </div>
+  <div class="w-1/2 grid grid-cols-1 md:grid-cols-3 gap-6">
+    {courses.map((course) => (
+      <GridCourse {...course} />
+    ))}
   </div>
 </section>
 </Container>

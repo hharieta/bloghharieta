@@ -1,0 +1,26 @@
+---
+interface Props {
+  category?: string;
+  id: string;
+  title: string;
+  thumbnail: string;
+  children: string;
+}
+
+const { category = 'courses', id, title, thumbnail, children } = Astro.props;
+---
+
+<div style="width: 100%; text-align: center;">
+  <a href={`/${category}/${id}`} style="cursor: pointer; text-decoration: none; color: inherit;">
+    <img
+      src={thumbnail}
+      alt={title}
+      style="border-radius: 12px; max-width: 100%; margin: auto;"
+      loading="lazy"
+    />
+    <div>
+      <h3 style="margin-top: 0.5rem; font-size: 20px;">{title}</h3>
+    </div>
+    <p style="font-size: 14px;">{children}</p>
+  </a>
+</div>
