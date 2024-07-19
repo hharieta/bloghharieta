@@ -2,7 +2,8 @@
 
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
-
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon/components";
 import cv from "@cv";
 import ExperienceCard from "@components/experiencecard.astro";
 import EducationCard from "@components/educationcard.astro";
@@ -71,10 +72,30 @@ const { courses } = basics;
       Courses
     </h2>
   </div>
-  <div class="w-1/2 grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div class="w-3/5 grid grid-cols-1 md:w-1/2 md:grid-cols-3 gap-6 ">
     {courses.map((course) => (
       <GridCourse {...course} />
     ))}
+  </div>
+  <div class="mt-6 flex flex-col sm:flex-row gap-3">
+    <Link
+      href="mailto:&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#111;&#64;&#104;&#104;&#97;&#114;&#105;&#101;&#116;&#97;&#46;&#108;&#97;&#116;"
+      target="_blank"
+      class="flex gap-1 items-center justify-center"
+      rel="noopener">
+      <Icon class="font-mplus text-white w-5 h-5" name="bx:bx-at" />
+       Contact Me
+    </Link>
+    <Link
+      size="lg"
+      style="outline"
+      rel="noopener"
+      href="https://github.com/hharieta"
+      class="flex gap-1 items-center justify-center"
+      target="_blank">
+      <Icon class="font-mplus text-black w-4 h-4" name="bx:bxl-github" />
+      GitHub Repo
+    </Link>
   </div>
 </section>
 </Container>

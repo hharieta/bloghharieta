@@ -59,7 +59,7 @@
         {
           "title": "Speaker – Jalisco Talent Land 2024 – Developer Land",
           "date": "2024-04-03",
-          "awarder": "Developer Land",
+          "awarder": "Talent Land",
           "summary": "Talk “Simplify and regulate your development processes in the cloud” as part of the promotion of the Archie by cloudbuddies platform.",
           "url": "https://2024.talent-land.mx/speakers/gatovsky/"
         }
@@ -67,33 +67,33 @@
       "courses":[
         {
           "url": "https://www.credly.com/badges/f5516c6a-baac-488f-901a-a1e6c3d463f9/public_url",
-          "title": "Python Project for AI & App. Dev.",
-          "thumbnail": "images/python-ibm-ai.png",
-          "issuer": "Coursera | Authorized: IBM"
+          "title": "Python for AI",
+          "thumbnail": "/images/python-ibm-ai.png",
+          "issuer": "IBM"
         },
         {
           "url": "https://www.credly.com/badges/ba7f4454-da0c-4b63-90a1-6c2c7280c2c6/public_url",
           "title": "Python Essentials 1",
-          "thumbnail": "images/python-essentials-1.1.png",
+          "thumbnail": "/images/python-essentials-1.1.png",
           "issuer": "Cisco"
         },
         {
           "url": "https://www.credly.com/badges/3a032413-10ff-430e-863f-72341a35e177/public_url",
-          "title": "Docker Essentials: A Developer Introduction",
-          "thumbnail": "images/docker-essentials.png",
+          "title": "Docker Essentials",
+          "thumbnail": "/images/docker-essentials.png",
           "issuer": "IBM"
         },
         {
           "url": "https://www.credly.com/badges/dc817c2c-502f-4b26-bd26-8d402d9b48f9/public_url",
           "title": "Python for Data Science",
-          "thumbnail": "images/python-for-data-science.png",
+          "thumbnail": "/images/python-for-data-science.png",
           "issuer": "IBM"
         },
         {
           "url": "https://coursera.org/share/4d49d52d398c0ce6deb480a45494e357",
           "title": "Python Specialization",
-          "thumbnail": "images/p4e.png",
-          "issuer": "Coursera | Authorized: University of Michigan"
+          "thumbnail": "/images/p4e.png",
+          "issuer": "UMich"
         }
       ],
       "socials": [
