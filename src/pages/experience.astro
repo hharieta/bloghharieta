@@ -5,11 +5,14 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 
-// import cv from "../content/cv/cv.json";
 import cv from "@cv";
 import ExperienceCard from "@components/experiencecard.astro";
+import EducationCard from "@components/educationcard.astro";
+import AwardsCard from "@components/awardscard.astro";
 const { basics } = cv;
 const { experience } = basics;
+const { education } = basics;
+const { awards } = basics;
 
 
 // Filter team entries with 'draft: false' & date before current date
@@ -27,7 +30,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
     class="w-full max-w-2xl flex flex-col justify-center items-start sm:items-center gap-3"
   >
     <h2
-      class=" text-2xl sm:text-lg md:text-xl tracking-tighter"
+      class="text-4xl sm:text-lg md:text-2xl tracking-tighter"
     >
       Experience
     </h2>
@@ -39,6 +42,30 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   </div>
   <div class="flex flex-col pointer-events-auto">
     {experience.map((exp) => <ExperienceCard {...exp} />)}
+  </div>
+  <div
+    class="w-full max-w-2xl flex flex-col justify-center items-start sm:items-center gap-3"
+  >
+    <h2
+      class="text-4xl sm:text-lg md:text-2xl tracking-tighter"
+    >
+      Education
+    </h2>
+  </div>
+  <div class="flex flex-col pointer-events-auto">
+    {education.map((edu) => <EducationCard {...edu} />)}
+  </div>
+  <div
+    class="w-full max-w-2xl flex flex-col justify-center items-start sm:items-center gap-3"
+  >
+    <h2
+      class="text-4xl sm:text-lg md:text-2xl tracking-tighter"
+    >
+      Awards
+    </h2>
+  </div>
+  <div class="flex flex-col pointer-events-auto">
+    {awards.map((awd) => <AwardsCard {...awd} />)}
   </div>
 </section>
 </Container>

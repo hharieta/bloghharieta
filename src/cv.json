@@ -17,46 +17,71 @@
         "endDate": null,
         "summary": "As a Cloud Engineer I write modules for deploy resources to the AWS cloud. Some of the tasks I do are to test the code ones made by other teammates and integrate them into the repository.",
         "highlights": [
-          "Developed a new feature for the Acme platform",
-          "Worked on the Y project, which involved A, B, and C",
-          "Collaborated with the Z team to improve the X platform"
+          "Automated development environments using Docker and Bash, enhancing efficiency for developers.",
+          "Deployed APIs utilizing API Gateway and AWS Lambda to streamline application performance.",
+          "Refactored code and integrated updates into the project repository to improve codebase maintainability.",
+          "Resolved Git conflicts to facilitate smooth collaboration and version control.",
+          "Reviewed and approved pull requests, ensuring adherence to coding standards and project requirements."
         ]
       },
       {
-        "company": "Y (Fomerly X)",
-        "position": "Software Engineer",
-        "startDate": "2018-01-01",
-        "endDate": "2019-12-31",
-        "summary": "I worked on the Y team, where I helped build the Z feature. I was responsible for A, which involved B, C, and D.",
+        "company": "Cloudbuddies",
+        "position": "Python Developer",
+        "startDate": "2022-11-01",
+        "endDate": "2024-02-01",
+        "summary": "As a Python Developer, I engineered cloud infrastructure modules using the Pulumi SDK with Python, I also identified and implemented process improvements to enhance system performance and efficiency.",
         "highlights": [
-          "Developed a new feature for the Y platform",
-          "Worked on the Z project, which involved B, C, and D",
-          "Collaborated with the A team to improve the Y platform"
+          "Developed cloud infrastructure modules using the Pulumi SDK with Python, including VPC, EC2, EKS, ALB, IAM, and S3 services.",
+          "Identified and implemented process improvements to enhance system performance and efficiency.",
+          "Developed and maintained repository documentation to ensure clear communication and alignment within the team."
         ]
       }],
-      "socials": [{
-        "network": "X (Fomerly Twitter)",
-        "label": "X (Fomerly Twitter)",
-        "username": "gonzalochale",
-        "url": "https://x.com/gonzalochale"
-      },
+      "education": [{
+        "institution": "Instituto Tecnológico de Cancún",
+        "area": "Bachelor´s Degree in Computer Science",
+        "summary": "Academic Achievements:",
+        "startDate": "2020-08-01",
+        "endDate": "",
+        "gpa": "8.8",
+        "highlights": [
+          "Competitive Programing - ITCancún 2023 – 1st place - Internal competitive programming contest at ITCancún, where exceptional team collaboration and problem solving were demonstrated.",
+          "Competitive Programing - ITCancún 2022 - 7th place - Participated in individual programming contest at ITCancún, where problem solving were demonstrated."
+        ]
+      }],
+      "awards":[
+        {
+          "title": "Genius Arena – Jalisco Talent Land 2024 – 3rd place",
+          "date": "2024-04-03",
+          "awarder": "SISA Consultores",
+          "summary": "As part of the SISA track: Anomaly detection by traffic analysis in navigation, I led the Redeemed Guys team in the SiSaGuard project.",
+          "url": "https://app.genius-arena.com/track_info/69/SISA---Detecci%C3%B3n-de-anomal%C3%ADas-por-an%C3%A1lisis-de-trafico-en-la-navegaci%C3%B3n"
+        },
+        {
+          "title": "Speaker – Jalisco Talent Land 2024 – Developer Land",
+          "date": "2024-04-03",
+          "awarder": "Developer Land",
+          "summary": "Talk “Simplify and regulate your development processes in the cloud” as part of the promotion of the Archie by cloudbuddies platform.",
+          "url": "https://2024.talent-land.mx/speakers/gatovsky/"
+        }
+      ],
+      "socials": [
       {
         "network": "GitHub",
         "label": "GitHub",
-        "username": "gonzalochale",
-        "url": "https://github.com/gonzalochale"
+        "username": "hharieta",
+        "url": "https://github.com/hharieta"
       },
       {
         "network": "LinkedIn",
         "label": "LinkedIn",
-        "username": "gonzalochale",
-        "url": "https://www.linkedin.com/in/gonzalochale/"
+        "username": "hharieta",
+        "url": "https://www.linkedin.com/in/hharieta/"
       },
       {
-        "network": "YouTube",
-        "label": "YouTube",
-        "username": "chalegonzalo",
-        "url": "https://www.youtube.com/@chalegonzalo"
+        "network": "Instagram",
+        "label": "Instagram",
+        "username": "inge.gatovsky",
+        "url": "https://www.instagram.com/inge.gatovsky/"
       }
     ]
     },
@@ -73,14 +98,14 @@
     "projects": [{
       "name": "Create your React UI library",
       "imageUrl": "/assets/project.webp",
-      "url": "https://ui-library-template.vercel.app/"
+      "url": ""
     },{
       "name": "Create your React UI library",
       "imageUrl": "/assets/project.webp",
-      "url": "https://ui-library-template.vercel.app/"
+      "url": ""
     },{
       "name": "Create your React UI library",
       "imageUrl": "/assets/project.webp",
-      "url": "https://ui-library-template.vercel.app/"
+      "url": ""
     }]
   }

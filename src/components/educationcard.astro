@@ -1,14 +1,15 @@
 ---
 interface Props {
-  company: string;
-  position: string;
+  institution: string;
+  area: string;
   summary: string;
   startDate: string;
   endDate: string | null;
+  gpa: string;
   highlights: string[];
 }
 
-const { company, position, summary, startDate, endDate, highlights } =
+const { institution, area, summary, startDate, endDate, highlights } =
   Astro.props;
 
 const formatter = new Intl.DateTimeFormat("en", {
@@ -32,12 +33,11 @@ const formattedEndDate = endDate ? formatter.format(parseDate(endDate)) : "Today
   <div class="md:col-span-2 flex flex-col gap-3">
     <div class="flex flex-col gap-1">
       <h3 class="text-muted-foreground text-slate-500 text-lg sm:text-normal">
-        {company}
+        {institution}
       </h3>
       <h4 class="text-lg sm:text-normal md:text-xl tracking-tighter">
-        {position}
+        {area}
       </h4>
-    </div>
     <time class="text-sm text-muted-foreground text-slate-500"
       >{formattedStartDate} - {formattedEndDate}</time
     >

@@ -1,14 +1,13 @@
 ---
 interface Props {
-  company: string;
-  position: string;
+  title: string;
+  date: string;
+  awarder: string;
   summary: string;
-  startDate: string;
-  endDate: string | null;
-  highlights: string[];
+  url: string;
 }
 
-const { company, position, summary, startDate, endDate, highlights } =
+const { title, date, awarder, summary, url } =
   Astro.props;
 
 const formatter = new Intl.DateTimeFormat("en", {
@@ -21,25 +20,23 @@ const parseDate = (dateString: string) => {
   return new Date(Number(dateParts[0]), Number(dateParts[1]) - 1, Number(dateParts[2]));
 }
 
-const formattedStartDate = formatter.format(parseDate(startDate));
-const formattedEndDate = endDate ? formatter.format(parseDate(endDate)) : "Today";
+const formattedStartDate = formatter.format(parseDate(date));
 
 ---
 
 <div
   class="relative max-w-xl p-10 flex flex-col gap-10 border-l-2 border-foreground"
 >
-  <div class="md:col-span-2 flex flex-col gap-3">
+  <div class="md:col-span-2 flex flex-col gap-3 ">
     <div class="flex flex-col gap-1">
       <h3 class="text-muted-foreground text-slate-500 text-lg sm:text-normal">
-        {company}
+        <a href={url} target="_blank" class=" hover:text-gray-900">{title}</a>
       </h3>
       <h4 class="text-lg sm:text-normal md:text-xl tracking-tighter">
-        {position}
+        {awarder}
       </h4>
-    </div>
     <time class="text-sm text-muted-foreground text-slate-500"
-      >{formattedStartDate} - {formattedEndDate}</time
+      >{formattedStartDate}</time
     >
   </div>
   <div
@@ -48,15 +45,6 @@ const formattedEndDate = endDate ? formatter.format(parseDate(endDate)) : "Today
     <p class="text-md sm:text-normal md:text-lg tracking-tighter">
       {summary}
     </p>
-    <ul class="custom-list">
-      {
-        highlights.map((highlight) => (
-          <li class="text-muted-foreground text-slate-500 text-md sm:text-normal">
-            {highlight}
-          </li>
-        ))
-      }
-    </ul>
   </div>
   <svg class="absolute timeline-marker" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet">
     <g transform="translate(150, 0)">
