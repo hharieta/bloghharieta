@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// import cv from "../content/cv/cv.json";
+import cv from "@cv";
+import ExperienceCard from "@components/experiencecard.astro";
+const { basics } = cv;
+const { experience } = basics;
+
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="Experience">
+ <Container>
+  <section
+  class="w-full flex flex-col gap-10  content-center items-center justify-center px-4 py-20 sm:py-24 overflow-hidden"
+>
+  <div
+    class="w-full max-w-2xl flex flex-col justify-center items-start sm:items-center gap-3"
+  >
+    <h2
+      class=" text-2xl sm:text-lg md:text-xl tracking-tighter"
+    >
+      Experience
+    </h2>
+    <p
+      class="text-muted-foreground sm:text-center text-sm sm:text-normal md:text-lg font-light tracking-tighter"
+    >
+      Here are some of the places I've worked at.
+    </p>
+  </div>
+  <div class="flex flex-col pointer-events-auto">
+    {experience.map((exp) => <ExperienceCard {...exp} />)}
+  </div>
+</section>
+</Container>
+</Layout>

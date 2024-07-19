@@ -1,6 +1,7 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
+    "resolveJsonModule": true,
     "baseUrl": "src",
     "strictNullChecks": true,
     "types": ["astro/client"],
@@ -10,7 +11,8 @@
       "@components/*": ["components/*"],
       "@layouts/*": ["layouts/*"],
       "@assets/*": ["assets/*"],
-      "@pages/*": ["pages/*"]
+      "@pages/*": ["pages/*"],
+      "@cv": ["./cv.json"]
     }
   }
 }
