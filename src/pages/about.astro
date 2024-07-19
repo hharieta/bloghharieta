@@ -1,57 +1,41 @@
 ---
-import { getCollection } from "astro:content";
-import { Picture } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import '../styles/aboutcard.css';
+import { Icon } from "astro-icon/components";
 
-// Filter team entries with 'draft: false' & date before current date
-const publishedTeamMembers = await getCollection("team", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
-});
+
 ---
 
 <Layout title="About">
   <Container>
     <Sectionhead>
       <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="desc"></Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
-      </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
-      </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        publishedTeamMembers.map((teamMemberEntry) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={teamMemberEntry.data.avatar.src}
-                alt={teamMemberEntry.data.avatar.alt}
-                sizes="(max-width: 800px) 100vw, 400px"
-                width={400}
-                height={400}
-                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
-              />
-            </div>
-
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
-              <h3 class="text-sm text-slate-500">
-                {teamMemberEntry.data.title}
-              </h3>
-            </div>
-          </div>
-        ))
-      }
-    </div>
+    <section class="content-section">
+      <h1 class=" text-2xl md:text-4xl">Gatovsky© </h1>
+      <div class="content">
+        <p> is a dedicated student pursuing a degree in Systems Engineering. Python is his favorite language and which he masters best, he performs optimally in the use of technologies such as Docker, Pulumi SDK, Bash and K8S integrated with AWS cloud services. Currently, he's actively contributing to a project named Archie where leverage his skills in infrastructure as code.</p><a href="">Learn more</a>
+      </div>
+      <div class="img">
+        <img src="/images/gatovsky.jpeg" />
+        <a
+          class="bg-black text-white no-underline py-1 px-1.5 text-xs font-bold leading-snug inline-block rounded"
+          href="https://www.instagram.com/inge.gatovsky/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Inge Gatovsky"
+        >
+          <span class="inline-flex content-center items-center py-0.5 px-0.75">
+            <Icon class="font-mplus text-white h-5 w-5 " name="bx:bxl-instagram" />
+            Inge Gatovsky©
+          </span>
+        </a>
+      </div>
+      
+    </section>
   </Container>
 </Layout>
