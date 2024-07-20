@@ -81,7 +81,7 @@
       "courses":[
         {
           "url": "https://www.credly.com/badges/f5516c6a-baac-488f-901a-a1e6c3d463f9/public_url",
-          "title": "Python for AI",
+          "title": "Python for AI and Web Dev.",
           "thumbnail": "/images/python-ibm-ai.png",
           "issuer": "IBM"
         },
@@ -99,7 +99,7 @@
         },
         {
           "url": "https://www.credly.com/badges/dc817c2c-502f-4b26-bd26-8d402d9b48f9/public_url",
-          "title": "Python for DS",
+          "title": "Python for Data Science",
           "thumbnail": "/images/python-for-data-science.png",
           "issuer": "IBM"
         },
