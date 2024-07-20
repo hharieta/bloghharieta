@@ -14,6 +14,12 @@
     }
   }
 
+  .parallax-bg {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  
   .content {
     color: #4d4d4d;
     margin-bottom: var(--box-y-padding);
@@ -117,4 +123,52 @@
     background-color: #ea4c89;
     color: #fff;
     padding: 0.5em 1em;
+  }
+
+  .hero-description-bk {
+    background-image: linear-gradient(0deg , #3f5efb, #fc466b);
+    border-radius: 30px;
+    position: absolute;
+    top: 55%;
+    left: -5px;
+    height: 65%;
+    width: 108%;
+    transform: skew(19deg, -9deg);
+  }
+  
+  .hero-description-bk {
+    background-image: linear-gradient(-20deg , #bb7413, #e7d25c)
+  }
+
+  @keyframes scale-a-lil {
+    from {
+      scale: .5;
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+    
+  @media (prefers-reduced-motion: no-preference) {
+    .img-effect {
+      animation: scale-a-lil linear both;
+      animation-timeline: view();
+      animation-range: 25vh 75vh;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+      img.spin {
+        animation: spin linear both;
+        animation-timeline: view();
+        animation-range: contain;
+      }
+    }
   }

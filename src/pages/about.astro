@@ -4,24 +4,31 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import '../styles/aboutcard.css';
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import Link from "@components/ui/link.astro";
+
+import cv from "@cv"
+const {basics} = cv;
+const {name, label, summary, socials, location, about} = basics;
+const {city, countryCode} = location;
 
 
 ---
 
 <Layout title="About">
-  <Container>
+   <Container>
     <Sectionhead>
-      <Fragment slot="title">About</Fragment>
+      <Fragment slot="title">Who is him?</Fragment>
       <Fragment slot="desc"></Fragment>
     </Sectionhead>
-
-    <section class="content-section">
-      <h1 class=" text-2xl md:text-4xl">Gatovsky© </h1>
+    <section class="w-full md:w-3/4 content-section">
+      <h1 class="text-2xl md:text-4xl"> {name} </h1>
       <div class="content">
-        <p> is a dedicated student pursuing a degree in Systems Engineering. Python is his favorite language and which he masters best, he performs optimally in the use of technologies such as Docker, Pulumi SDK, Bash and K8S integrated with AWS cloud services. Currently, he's actively contributing to a project named Archie where leverage his skills in infrastructure as code.</p><a href="">Learn more</a>
+        <p set:html={summary}></p>
+        <!-- <a href="">Learn more</a> -->
       </div>
-      <div class="img">
-        <img src="/images/gatovsky.jpeg" />
+      <div class="img img-effect">
+        <Image src="/images/gatovsky.jpeg" alt="gatovsky" width={800} height={800} loading="eager" />
         <a
           class="bg-black text-white no-underline py-1 px-1.5 text-xs font-bold leading-snug inline-block rounded"
           href="https://www.instagram.com/inge.gatovsky/"
@@ -31,11 +38,54 @@ import { Icon } from "astro-icon/components";
         >
           <span class="inline-flex content-center items-center py-0.5 px-0.75">
             <Icon class="font-mplus text-white h-5 w-5 " name="bx:bxl-instagram" />
-            Inge Gatovsky©
+            {name}
           </span>
         </a>
       </div>
-      
     </section>
+    </Container>
+    <section class="relative w-screen h-screen overflow-hidden top-20">
+      <div class="parallax-bg absolute top-0 left-0 w-full h-1/2 md:h-3/4 bg-cover bg-center bg-fixed content-center items-center text-center"
+       style="background-image: url('/images/background.jpeg');">
+       <div class="flex flex-col content-center items-center">
+        <Image 
+          src="/images/gatovsky.svg" 
+          width={10} height={10} 
+          loading="eager" alt="gatovsky-logo" 
+          class="pb-0 mb-0 opacity-35 w-1/4 md:w-1/6" />
+        <h1 class="pt-0 text-4xl md:text-6xl font-bold text-stone-800 opacity-75">{name}</h1>
+        <p class="text-xl md:text-xl text-stone-800 font-black font-handlee opacity-75">{label}</p>
+        <p class="text-lg md:text-xl text-stone-800 font-black font-handlee opacity-75">{city}, {countryCode}</p>
+       </div>
+      </div>
+    </section>
+    <Container>
+    <section class="max-w-screen-xl mx-auto p-6 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      {
+        about.map((item) => (
+          <div class="bg-gradient-to-r from-sky-200 to-indigo-400 hover:bg-gradient-to-r hover:from-violet-200 hover:to-fuchsia-400 rounded-lg shadow-lg p-6 transition-all duration-300">
+            <h2 class="text-xl font-bold mb-2">{item.title}</h2>
+            <p class="text-gray-700 mb-4 mt-4">{item.content}</p>
+            <a href="#" class="text-blue-600 font-semibold hover:underline">Learn more</a>
+          </div>
+        ))
+      }
+    </section>
+    <div class="w-full flex flex-col md:flex-row gap-3  content-center items-center justify-center mt-10">
+      {
+        socials.map((social) => (
+          <div class="rounded-lg w-1/2 md:w-2/12 md:rounded-full">
+          <Link
+            href={social.url}
+            target="_blank"
+            class="flex gap-1 items-center justify-center"
+            rel="noopener">
+            <Icon class="font-mplus rounded-full w-4 h-4" name={social.name} />
+            {social.network}
+          </Link>
+          </div>
+        ))
+      }
+  </div>
   </Container>
 </Layout>
