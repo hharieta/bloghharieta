@@ -13,20 +13,19 @@ const { url, title, thumbnail, issuer } = Astro.props;
 <div class="w-full md:w-max flex flex-col text-center items-center content-center">
   <div class="w-full md:w-max content-center items-center justify-center">
     <a href={url} target="_blank" class="decoration-inherit cursor-pointer">
-      <Image
-      src={thumbnail}
-      alt={title}
-      width={32}
-      height={32}
-      class="rounded-lg w-32 md:w-32 m-5"
-      loading="lazy"
-      /> 
+        <Image
+        src={thumbnail}
+        alt={title}
+        width={100}
+        height={100}
+        class="rounded-lg w-full md:w-28 m-4"
+        loading="eager"
+        />
+        <div >
+        <h3 
+        class="text-lg font-semibold text-gray-800">{title}</h3>
+        </div>
+        <p class="text-md">{issuer}</p>
     </a>
-    <div class="w-full md:w-max pt-4">
-      <h3 
-      class="text-lg font-semibold text-gray-800">{title}</h3>
-      <p class="text-md">{issuer}</p>
-    </div>
-  </div>
 </div>
 
