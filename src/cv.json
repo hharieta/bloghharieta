@@ -1,15 +1,29 @@
 {
     "basics": {
       "showAuroraBackground": false,
-      "name": "Héctor H. Arieta",
+      "name": "Inge Gatovsky©",
       "label": "Cloud Engineer",
-      "image": "../assets/gatovsky.webp",
-      "summary": "Gatovsky is a Cloud Engineer with experience in AWS, Azure, and GCP. He has worked on a variety of projects, including building and deploying cloud infrastructure, managing databases, and optimizing performance. He is passionate about technology and enjoys learning new skills to stay up-to-date with the latest trends.",
+      "image": "images/gatovsky.webp",
+      "summary": "is a dedicated student pursuing a degree in Systems Engineering from Mexico. Python is his favorite language and which he masters best, he performs optimally in the use of technologies such as Docker, Pulumi SDK, Bash and K8S integrated with AWS cloud services. He's passionate about Machine Learning and Linux systems, always eager to learn new skills and technologies.",
       "location": {
         "city": "Cancún",
         "countryCode": "MX",
         "country": "México"
       },
+      "about":[
+        {
+          "title": "Professional Background",
+          "content": "He is a cloud engineer with experience in developing cloud infrastructure modules using the Pulumi SDK with Python. He has a solid foundation in Python and is proficient in Docker, Bash and Kubernetes. He's an expert in AWS cloud services including VPC, EC2, EKS, ALB, IAM, Lambda, API Gateway and S3."
+        },
+        {
+          "title": "Achievements",
+          "content": "He has achieved several awards and recognitions, including 1st place in the Competitive Programming contest at ITCancun in 2023 and 3rd place in the Genius Arena - Jalisco Talent Land 2024. He has also taken several courses in Python, Docker and Data Science, obtaining certifications from IBM, Cisco and the University of Michigan."
+        },
+        {
+          "title": "Career Goals",
+          "content": "he's seeking a challenging position as a Cloud Engineer where can leverage his skills and experience to develop innovative cloud solutions. An passionate about technology and committed to continuous learning and professional development."
+        }
+      ],
       "experience": [{
         "company": "Cloudbuddies",
         "position": "Cloud Engineer",
@@ -101,19 +115,22 @@
         "network": "GitHub",
         "label": "GitHub",
         "username": "hharieta",
-        "url": "https://github.com/hharieta"
+        "url": "https://github.com/hharieta",
+        "name": "bx:bxl-github"
       },
       {
         "network": "LinkedIn",
         "label": "LinkedIn",
         "username": "hharieta",
-        "url": "https://www.linkedin.com/in/hharieta/"
+        "url": "https://www.linkedin.com/in/hharieta/",
+        "name": "bx:bxl-linkedin-square"
       },
       {
         "network": "Instagram",
         "label": "Instagram",
         "username": "inge.gatovsky",
-        "url": "https://www.instagram.com/inge.gatovsky/"
+        "url": "https://www.instagram.com/inge.gatovsky/",
+        "name": "bx:bxl-instagram-alt"
       }
     ]
     },

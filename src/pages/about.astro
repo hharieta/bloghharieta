@@ -1,57 +1,91 @@
 ---
-import { getCollection } from "astro:content";
-import { Picture } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import '../styles/aboutcard.css';
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import Link from "@components/ui/link.astro";
 
-// Filter team entries with 'draft: false' & date before current date
-const publishedTeamMembers = await getCollection("team", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
-});
+import cv from "@cv"
+const {basics} = cv;
+const {name, label, summary, socials, location, about} = basics;
+const {city, countryCode} = location;
+
+
 ---
 
 <Layout title="About">
-  <Container>
+   <Container>
     <Sectionhead>
-      <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="title">Who is him?</Fragment>
+      <Fragment slot="desc"></Fragment>
     </Sectionhead>
-
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
-      </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
-      </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+    <section class="w-full md:w-3/4 content-section">
+      <h1 class="text-2xl md:text-4xl"> {name} </h1>
+      <div class="content">
+        <p set:html={summary}></p>
+        <!-- <a href="">Learn more</a> -->
+      </div>
+      <div class="img img-effect">
+        <Image src="/images/gatovsky.jpeg" alt="gatovsky" width={800} height={800} loading="eager" />
+        <a
+          class="bg-black text-white no-underline py-1 px-1.5 text-xs font-bold leading-snug inline-block rounded"
+          href="https://www.instagram.com/inge.gatovsky/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Inge Gatovsky"
+        >
+          <span class="inline-flex content-center items-center py-0.5 px-0.75">
+            <Icon class="font-mplus text-white h-5 w-5 " name="bx:bxl-instagram" />
+            {name}
+          </span>
+        </a>
+      </div>
+    </section>
+    </Container>
+    <section class="relative w-screen h-screen overflow-hidden top-20">
+      <div class="parallax-bg absolute top-0 left-0 w-full h-1/2 md:h-3/4 bg-cover bg-center bg-fixed content-center items-center text-center"
+       style="background-image: url('/images/background.jpeg');">
+       <div class="flex flex-col content-center items-center">
+        <Image 
+          src="/images/gatovsky.svg" 
+          width={10} height={10} 
+          loading="eager" alt="gatovsky-logo" 
+          class="pb-0 mb-0 opacity-35 w-1/4 md:w-1/6" />
+        <h1 class="pt-0 text-4xl md:text-6xl font-bold text-stone-800 opacity-75">{name}</h1>
+        <p class="text-xl md:text-xl text-stone-800 font-black font-handlee opacity-75">{label}</p>
+        <p class="text-lg md:text-xl text-stone-800 font-black font-handlee opacity-75">{city}, {countryCode}</p>
+       </div>
+      </div>
+    </section>
+    <Container>
+    <section class="max-w-screen-xl mx-auto p-6 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {
-        publishedTeamMembers.map((teamMemberEntry) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={teamMemberEntry.data.avatar.src}
-                alt={teamMemberEntry.data.avatar.alt}
-                sizes="(max-width: 800px) 100vw, 400px"
-                width={400}
-                height={400}
-                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
-              />
-            </div>
-
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
-              <h3 class="text-sm text-slate-500">
-                {teamMemberEntry.data.title}
-              </h3>
-            </div>
+        about.map((item) => (
+          <div class="bg-gradient-to-r from-sky-200 to-indigo-400 hover:bg-gradient-to-r hover:from-violet-200 hover:to-fuchsia-400 rounded-lg shadow-lg p-6 transition-all duration-300">
+            <h2 class="text-xl font-bold mb-2">{item.title}</h2>
+            <p class="text-gray-700 mb-4 mt-4">{item.content}</p>
+            <a href="#" class="text-blue-600 font-semibold hover:underline">Learn more</a>
           </div>
         ))
       }
-    </div>
+    </section>
+    <div class="w-full flex flex-col md:flex-row gap-3  content-center items-center justify-center mt-10">
+      {
+        socials.map((social) => (
+          <div class="rounded-lg w-1/2 md:w-2/12 md:rounded-full">
+          <Link
+            href={social.url}
+            target="_blank"
+            class="flex gap-1 items-center justify-center"
+            rel="noopener">
+            <Icon class="font-mplus rounded-full w-4 h-4" name={social.name} />
+            {social.network}
+          </Link>
+          </div>
+        ))
+      }
+  </div>
   </Container>
 </Layout>
