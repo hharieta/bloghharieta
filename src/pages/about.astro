@@ -21,7 +21,7 @@ const {city, countryCode} = location;
       <Fragment slot="title">Who is him?</Fragment>
       <Fragment slot="desc"></Fragment>
     </Sectionhead>
-    <section class="w-full md:w-3/4 content-section">
+    <section class="w-full md:w-xl content-section">
       <h1 class="text-2xl md:text-4xl"> {name} </h1>
       <div class="content">
         <p set:html={summary}></p>
@@ -44,8 +44,8 @@ const {city, countryCode} = location;
       </div>
     </section>
     </Container>
-    <section class="relative w-screen h-screen overflow-hidden top-20">
-      <div class="parallax-bg absolute top-0 left-0 w-full h-1/2 md:h-3/4 bg-cover bg-center bg-fixed content-center items-center text-center"
+    <section class="relative w-screen h-full md:h-screen overflow-hidden top-20">
+      <div class="parallax-bg  top-0 left-0 w-screen h-full md:h-screen lg:h-screen  bg-cover bg-center bg-fixed content-center items-center text-center"
        style="background-image: url('/images/background.jpeg');">
        <div class="flex flex-col content-center items-center">
         <Image 
@@ -60,7 +60,7 @@ const {city, countryCode} = location;
       </div>
     </section>
     <Container>
-    <section class="max-w-screen-xl mx-auto p-6 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <section class="max-w-screen-xl mx-auto pt-32 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {
         about.map((item) => (
           <div class="bg-gradient-to-r from-sky-200 to-indigo-400 hover:bg-gradient-to-r hover:from-violet-200 hover:to-fuchsia-400 rounded-lg shadow-lg p-6 transition-all duration-300">
