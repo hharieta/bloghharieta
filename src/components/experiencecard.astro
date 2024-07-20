@@ -29,7 +29,7 @@ const formattedEndDate = endDate ? formatter.format(parseDate(endDate)) : "Today
 <div
   class="relative max-w-xl p-10 flex flex-col gap-10 border-l-2 border-foreground"
 >
-  <div class="md:col-span-2 flex flex-col gap-3">
+  <div class="cv-section md:col-span-2 flex flex-col gap-3">
     <div class="flex flex-col gap-1">
       <h3 class="text-muted-foreground text-slate-500 text-lg sm:text-normal">
         {company}
@@ -48,7 +48,7 @@ const formattedEndDate = endDate ? formatter.format(parseDate(endDate)) : "Today
     <p class="text-md sm:text-normal md:text-lg tracking-tighter">
       {summary}
     </p>
-    <ul class="custom-list">
+    <ul class="cv-section custom-list">
       {
         highlights.map((highlight) => (
           <li class="text-muted-foreground text-slate-500 text-md sm:text-normal">
@@ -70,6 +70,7 @@ const formattedEndDate = endDate ? formatter.format(parseDate(endDate)) : "Today
     </g>
   </svg>
 </div>
+<script src="../scripts/observer.js"></script>
 
 <style>
   .timeline-marker {
@@ -89,4 +90,15 @@ const formattedEndDate = endDate ? formatter.format(parseDate(endDate)) : "Today
   .left-\\[-7px\\] {
     left: -7px;
   }
+
+  .cv-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.cv-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 </style>
