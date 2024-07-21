@@ -29,7 +29,7 @@
         "position": "Cloud Engineer",
         "startDate": "2024-02-01",
         "endDate": null,
-        "summary": "As a Cloud Engineer I write modules for deploy resources to the AWS cloud. Some of the tasks I do are to test the code ones made by other teammates and integrate them into the repository.",
+        "summary": "As a Cloud Engineer were wrote modules to deploy resources in the AWS cloud. Some of the tasks performed were testing code made by other teammates and integrating them into the repository.",
         "highlights": [
           "Automated development environments using Docker and Bash, enhancing efficiency for developers.",
           "Deployed APIs utilizing API Gateway and AWS Lambda to streamline application performance.",
@@ -43,7 +43,7 @@
         "position": "Python Developer",
         "startDate": "2022-11-01",
         "endDate": "2024-02-01",
-        "summary": "As a Python Developer, I engineered cloud infrastructure modules using the Pulumi SDK with Python, I also identified and implemented process improvements to enhance system performance and efficiency.",
+        "summary": "As a Python developer, designed cloud infrastructure modules using the Pulumi SDK with Python, also identified and implemented process improvements to improve system performance and efficiency.",
         "highlights": [
           "Developed cloud infrastructure modules using the Pulumi SDK with Python, including VPC, EC2, EKS, ALB, IAM, and S3 services.",
           "Identified and implemented process improvements to enhance system performance and efficiency.",
@@ -64,10 +64,10 @@
       }],
       "awards":[
         {
-          "title": "Genius Arena – Jalisco Talent Land 2024 – 3rd place",
+          "title": "Hackathon – Jalisco Talent Land 2024 – 3rd place",
           "date": "2024-04-03",
-          "awarder": "SISA Consultores",
-          "summary": "As part of the SISA track: Anomaly detection by traffic analysis in navigation, I led the Redeemed Guys team in the SiSaGuard project.",
+          "awarder": "Genius Arena",
+          "summary": "As part of the SISA track: Anomaly detection by traffic analysis in navigation, He led the Redeemed Guys team in the SiSaGuard project.",
           "url": "https://app.genius-arena.com/track_info/69/SISA---Detecci%C3%B3n-de-anomal%C3%ADas-por-an%C3%A1lisis-de-trafico-en-la-navegaci%C3%B3n"
         },
         {
