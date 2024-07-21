@@ -9,9 +9,6 @@ import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
 import '@fontsource-variable/bricolage-grotesque';
-import '../styles/carousel.css';
-import '../styles/cards.css';
-import  SpeedInsights  from "@vercel/speed-insights/astro"
 
 
 export interface Props {
@@ -65,7 +62,6 @@ const makeTitle = title
   <body>
     <Navbar />
     <slot />
-    <SpeedInsights />
     <Footer />
     <style is:global>
       /* Improve Page speed */
