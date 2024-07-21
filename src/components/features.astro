@@ -1,4 +1,7 @@
-
+---
+import '../styles/cards.css';
+const CDN_IMAGE = import.meta.env.CDN_URL;
+---
 
 <section class="my-5">
   <div class="flex flex-col mt-1 md:mt-0">
@@ -9,42 +12,42 @@
       "the best breaking production"
     </h3>
     <p class="text-xl mt-4 text-slate-600">
-      Do you want to know more about me?
-      I´m a Cloud Engineer with a passion for data engineering & ML.
-      Also, I write cheap love poems 🩷
+      Would you like to know more? <br />
+      Inge Gatovsky is a Computer Science student and Cloud Engineer with a passion for Linux, DevOps & ML..., <br/>
+      Also, writes cheap love poems 🩷
     </p>
   </div>
 
 </section>
-<section class="container1 w-full h-full">
+<section class="container1 w-full h-full max-w-screen md:pl-14">
   <article class="container-cards justify-center w-max h-max">
       <div class="cards1">
           <div class="cards-item">
-              <img src="/images/c1.webp" loading="lazy" alt="talenland24">
+              <img src={`${CDN_IMAGE}/images/c1.webp`} loading="eager" alt="talenland24">
           </div>
           <div class="cards-item">
-              <img src="/images/c2.webp" loading="lazy" alt="itcancun">
+              <img src={`${CDN_IMAGE}/images/c2.webp`} loading="eager" alt="itcancun">
           </div>
           <div class="cards-item">
-              <img src="/images/c3.webp" loading="lazy" alt="tajamar">
+              <img src={`${CDN_IMAGE}/images/c3.webp`} loading="eager" alt="tajamar">
           </div>
           <div class="cards-item">
-              <img src="/images/c4.webp" loading="lazy" alt="jon maddog">
+              <img src={`${CDN_IMAGE}/images/c4.webp`} loading="eager" alt="jon maddog">
           </div>
           <div class="cards-item">
-            <img src="/images/c5.webp" loading="lazy" alt="genius arena 2024">
+            <img src={`${CDN_IMAGE}/images/c5.webp`} loading="eager" alt="genius arena 2024">
           </div>
           <div class="cards-item">
-            <img src="/images/c6.webp" loading="lazy" alt="birthday">
+            <img src={`${CDN_IMAGE}/images/c6.webp`} loading="eager" alt="birthday">
           </div>
           <div class="cards-item">
-            <img src="/images/c7.webp" loading="lazy" alt="genius arena 2024">
+            <img src={`${CDN_IMAGE}/images/c7.webp`} loading="eager" alt="genius arena 2024">
           </div>
           <div class="cards-item">
-            <img src="/images/c8.webp" loading="lazy" alt="flutter app">
+            <img src={`${CDN_IMAGE}/images/c8.webp`} loading="eager" alt="flutter app">
           </div>
           <div class="cards-item">
-            <img src="/images/c9.webp" loading="lazy" alt="gatovsky">
+            <img src={`${CDN_IMAGE}/images/c9.webp`} loading="eager" alt="gatovsky">
           </div>
       </div>
   </article>
