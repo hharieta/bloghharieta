@@ -11,6 +11,7 @@ import cv from "@cv"
 const {basics} = cv;
 const {name, label, summary, socials, location, about} = basics;
 const {city, countryCode} = location;
+const CDN_IMAGE = import.meta.env.CDN_URL;
 
 
 ---
@@ -27,7 +28,7 @@ const {city, countryCode} = location;
         <p set:html={summary}></p>
         <!-- <a href="">Learn more</a> -->
       </div>
-      <div class="img img-effect">
+      <div class="img ">
         <Image src="/images/gatovsky.jpeg" alt="gatovsky" width={800} height={800} loading="eager" />
         <a
           class="bg-black text-white no-underline py-1 px-1.5 text-xs font-bold leading-snug inline-block rounded"

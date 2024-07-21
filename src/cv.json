@@ -135,7 +135,7 @@
     ]
     },
     "stack": [
-      {"name": "simple-icons:python", "level": "90"},
+      {"name": "simple-icons:vim", "level": "90"},
       {"name": "simple-icons:docker", "level": "80"},
       {"name": "simple-icons:kubernetes", "level": "60"},
       {"name": "simple-icons:pulumi", "level": "50"},
@@ -147,10 +147,10 @@
       {"name": "simple-icons:git", "level": "60"},
       {"name": "simple-icons:gnubash", "level": "70"},
       {"name": "simple-icons:terraform", "level": "30"},
-      {"name": "simple-icons:javascript", "level": "30"},
+      {"name": "simple-icons:python", "level": "30"},
       {"name": "simple-icons:flask", "level": "40"},
       {"name": "simple-icons:django", "level": "40"},
-      {"name": "simple-icons:ubuntu", "level": "40"},
+      {"name": "simple-icons:javascript", "level": "40"},
       {"name": "simple-icons:amazondynamodb", "level": "40"},
       {"name": "simple-icons:awslambda", "level": "40"},
       {"name": "simple-icons:amazonapigateway", "level": "40"},
