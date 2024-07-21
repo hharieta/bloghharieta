@@ -1,78 +1,55 @@
 ---
 // @ts-ignore
 import { Icon } from "astro-icon/components";
-import '../styles/carousel.css';
+import cv from '@cv';
+const {stack} = cv;
 ---
 
-
-<section class="carousel-container content-center items-center w-max h-max  md:w-full md:h-full  lg:w-max lg:h-max ">
-  <div class="carousel-title">
-    <h3 class="text-center text-2xl lg:text-6xl md:text-4xl ">Gatovsky stack</h2>
+<section class="relative flex flex-col w-full text-center justify-center items-center gap-10 px-4 py-20 sm:py-24  pointer-events-none">
+  <h3 class="absolute top-[-20px] h-10 flex items-center px-2 py-1 rounded-full border text-foreground text-2xl sm:text-normal md:text-3xl tracking-tighter bg-card">
+    Gatovsky stack
+  </h3>
+  <div class="w-full h-fit max-w-3xl flex flex-col justify-center select-none overflow-hidden gradient">
+    <div class="w-max flex flex-nowrap gap-[4rem] animate-slide-logos">
+      {
+        stack.map((item) => (
+        <Icon class="size-14 object-containt" name={item.name} />
+      ))
+      }
+    </div>
+    
   </div>
-  <article class="carousel-track h-max lg:h-full md:h-full flex gap-1 md:gap-5 items-center justify-center mt-10">
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:python" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:docker" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:kubernetes" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:pulumi" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:linux" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:jenkins" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:amazonaws" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:mysql" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:postgresql" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:git" />
-    </div>
-    <!-- Duplicate items for seamless looping -->
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:terraform" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:gnubash" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:javascript" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:flask" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:django" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:amazondynamodb" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:awslambda" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:amazonapigateway" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:swagger" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:astro" />
-    </div>
-    <div class="carousel-item">
-      <Icon class="size-10 md:size-16" name="simple-icons:tailwindcss" />
-    </div>
-  </article>
 </section>
+
+<style>
+  .gradient {
+    mask: linear-gradient(
+      90deg,
+      transparent,
+      black 20%,
+      black 80%,
+      transparent
+    );
+    webkitmask: linear-gradient(
+      90deg,
+      transparent,
+      black 20%,
+      black 80%,
+      black transparent
+    );
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100%));
+    }
+  }
+
+  .animate-slide-logos {
+    display: flex;
+    animation: slide 90s linear infinite;
+  }
+</style>
