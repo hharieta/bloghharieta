@@ -169,7 +169,7 @@
         "stack": ["NextJs ", "AWS CDK ", "DynamoDB"],
         "source": "https://github.com/hharieta/aws_crud_archie",
         "demo": "",
-        "description": "Internal component used by <a class='text-red-400 font-bold' href='https://www.cloudbuddies.io/' target='_blank'> Archie </a> to store and retrieve data on DynamoDB tables..."
+        "description": "Internal component used by <a style='color: rgb(51 65 85); font-weight: 700;' href='https://www.cloudbuddies.io/' target='_blank'> Archie </a> to store and retrieve data on DynamoDB tables..."
       },
       {
         "name": "Emotion Analyzer",
