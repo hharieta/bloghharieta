@@ -159,17 +159,39 @@
       {"name": "simple-icons:tailwindcss", "level": "70"},
       {"name": "simple-icons:vim", "level": "40"}
     ],
-    "projects": [{
-      "name": "Create your React UI library",
-      "imageUrl": "/assets/project.webp",
-      "url": ""
-    },{
-      "name": "Create your React UI library",
-      "imageUrl": "/assets/project.webp",
-      "url": ""
-    },{
-      "name": "Create your React UI library",
-      "imageUrl": "/assets/project.webp",
-      "url": ""
-    }]
+    "projects": [
+      {
+        "name": "AWS Crud Component",
+        "subname": "Used AWS CDK to develop a CRUD web app",
+        "image": "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/aws_crud.png?v=1721582649100",
+        "author": "Inge Gatovsky",
+        "platform": "Web",
+        "stack": ["NextJs ", "AWS CDK ", "DynamoDB"],
+        "source": "https://github.com/hharieta/aws_crud_archie",
+        "demo": "",
+        "description": "Internal component used by <a class='text-red-400' href='https://www.cloudbuddies.io/' target='_blank'> Archie </a> to store and retrieve data on DynamoDB tables."
+      },
+      {
+        "name": "Emotion Analyzer",
+        "subname": "Flask API for IBM Watson NLU",
+        "image": "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/watson1.png?v=1721587273464",
+        "author": "Inge Gatovsky",
+        "platform": "Web",
+        "stack": ["Flask ", "IBM ", "Watson NLPU"],
+        "source": "https://github.com/hharieta/aws_crud_archie",
+        "demo": "",
+         "description": "Emotion Analyzer is a final project for the IBM course Developing AI Applications with Python and Flask."
+      },
+      {
+        "name": "Jinicuil Consultoría Digital ",
+        "subname": "Maintenance of the Jinicuil Consultoría Digital",
+        "image": "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/jinicuil2.png?v=1721603489175",
+        "author": "Inge Gatovsky",
+        "platform": "Web",
+        "stack": ["JavaScript", "Bootstrap", "CSS"],
+        "source": "",
+        "demo": "https://jinicuil.com/",
+        "description": "Maintenance of the Jinicuil Consultoría Digital  website. Focused on using Bootstrap for style sheets and JavaScript for animations."
+      }
+    ]
   }
