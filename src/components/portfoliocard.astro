@@ -14,30 +14,30 @@ interface Props {
 const { name, subname, image, author, platform, stack, description, source, demo } = Astro.props;
 
 ---
-    <div class="blog-card min-w-full max-w-full">
+    <div class="blog-card min-w-full min-h-lg">
       <div class="meta">
         <div class="photo" style={`background-image: url('${image}')`}></div>
         <ul class="details">
           <li class="author">
-            <a>{author}</a>
+            <div class="inline-block">{author}</div>
           </li>
           <li class="platform">{platform}</li>
           <li class="stack">
             <ul>
               {
                 stack.map((item) => (
-                  <li><a>{item}</a></li>
+                  <li><div>{item}</div></li>
                 ))
               }
             </ul>
           </li>
         </ul>
       </div>
-      <div class="description">
+      <div class="description  text-balance">
         <h1>{name}</h1>
-        <h2 class="font-handlee font-black">{subname}</h2>
+        <h2 class="font-handlee text-slate-600">{subname}</h2>
         <p set:html={description}></p>
-        <p class="read-more">
+        <p class="read-more font-semibold">
           <a href="#">
             Read More
           </a>
@@ -144,7 +144,7 @@ const { name, subname, image, author, platform, stack, description, source, demo
   font-size: 1rem;
   font-weight: 300;
   text-transform: capitalize;
-  color: #a2a2a2;
+  
   margin-top: 5px;
 }
 .blog-card .description .read-more {

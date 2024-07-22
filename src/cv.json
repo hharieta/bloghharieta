@@ -169,7 +169,7 @@
         "stack": ["NextJs ", "AWS CDK ", "DynamoDB"],
         "source": "https://github.com/hharieta/aws_crud_archie",
         "demo": "",
-        "description": "Internal component used by <a class='text-red-400' href='https://www.cloudbuddies.io/' target='_blank'> Archie </a> to store and retrieve data on DynamoDB tables."
+        "description": "Internal component used by <a class='text-red-400 font-bold' href='https://www.cloudbuddies.io/' target='_blank'> Archie </a> to store and retrieve data on DynamoDB tables..."
       },
       {
         "name": "Emotion Analyzer",
@@ -177,10 +177,10 @@
         "image": "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/watson1.png?v=1721587273464",
         "author": "Inge Gatovsky",
         "platform": "Web",
-        "stack": ["Flask ", "IBM ", "Watson NLPU"],
+        "stack": ["Flask ", "IBM Watson", "NLU"],
         "source": "https://github.com/hharieta/aws_crud_archie",
         "demo": "",
-         "description": "Emotion Analyzer is a final project for the IBM course Developing AI Applications with Python and Flask."
+         "description": "Final project for the IBM course Developing AI Applications with Python and Flask..."
       },
       {
         "name": "Jinicuil Consultoría Digital ",
@@ -191,7 +191,7 @@
         "stack": ["JavaScript", "Bootstrap", "CSS"],
         "source": "",
         "demo": "https://jinicuil.com/",
-        "description": "Maintenance of the Jinicuil Consultoría Digital  website. Focused on using Bootstrap for style sheets and JavaScript for animations."
+        "description": "Maintenance of the Jinicuil Consultoría Digital  website. Focused on using Bootstrap & JS..."
       }
     ]
   }
