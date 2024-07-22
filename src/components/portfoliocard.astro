@@ -12,6 +12,7 @@ interface Props {
 }
 
 const { name, subname, image, author, platform, stack, description, source, demo } = Astro.props;
+const slug = name.toLowerCase().replace(/\s+/g, '-');
 
 ---
     <div class="blog-card min-w-full min-h-lg">
@@ -38,7 +39,7 @@ const { name, subname, image, author, platform, stack, description, source, demo
         <h2 class="font-handlee text-slate-600">{subname}</h2>
         <p set:html={description}></p>
         <p class="read-more font-semibold">
-          <a href="#">
+          <a href={`/portfolio/${slug}`}>
             Read More
           </a>
         </p>

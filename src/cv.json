@@ -162,36 +162,76 @@
     "projects": [
       {
         "name": "AWS Crud Component",
+        
         "subname": "Used AWS CDK to develop a CRUD web app",
         "image": "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/aws_crud.png?v=1721582649100",
+        "images": [
+          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/aws_crud.png?v=1721582649100",
+          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/aws_crud2.png?v=1721582649617",
+          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/aws_crud3.png?v=1721582650031",
+          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/aws_crud4.png?v=1721582650637"
+        ],
         "author": "Inge Gatovsky",
+        "date": "2024-01-01",
         "platform": "Web",
-        "stack": ["NextJs ", "AWS CDK ", "DynamoDB"],
+        "stack": ["NextJs ", "Aws CDK ", "DynamoDB"],
         "source": "https://github.com/hharieta/aws_crud_archie",
-        "demo": "",
-        "description": "Internal component used by <a style='color: rgb(51 65 85); font-weight: 700;' href='https://www.cloudbuddies.io/' target='_blank'> Archie </a> to store and retrieve data on DynamoDB tables..."
+        "demo": "a",
+        "description": "Internal component used by <a style='color: rgb(51 65 85); font-weight: 700;' href='https://www.cloudbuddies.io/' target='_blank'> Archie </a> to store and retrieve data on DynamoDB tables...",
+        "content": "This project is a simple CRUD application that uses AWS services to store and retrieve data on DynamoDB. Currently used as a local component for Archie developers side. Based on the public project's Sankharr  repository. Modifications and Enhancements:",
+        "features": [
+          "Allows you to choose the name of the table to be created.",
+          "Allows you to select the name of the table to which data will be appended.",
+          "When you finish entering data, you are correctly redirected to the table you worked on.",
+          "Allows you to delete items correctly When editing an element of the table.",
+          "Now recover the data from it to avoid having to write all the fields again"
+      ]
       },
       {
         "name": "Emotion Analyzer",
         "subname": "Flask API for IBM Watson NLU",
         "image": "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/watson1.png?v=1721587273464",
+        "images": [
+          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/watson1.png?v=1721587273464", 
+          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/watson2.png?v=1721587274936",
+          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/watson3.png?v=1721587275673"
+        ],
         "author": "Inge Gatovsky",
+        "date": "2024-01-01",
         "platform": "Web",
         "stack": ["Flask ", "IBM Watson", "NLU"],
         "source": "https://github.com/hharieta/aws_crud_archie",
         "demo": "",
-         "description": "Final project for the IBM course Developing AI Applications with Python and Flask..."
+        "description": "Final project for the IBM course Developing AI Applications with Python and Flask...",
+        "content": "Emotion Analyzer is a final project for the IBM course Developing AI Applications with Python and Flask  which one explore the emotions analysis powered by IBM Watson Service AI. this project aims to decipher and analyze the emotional tone within input text.",
+        "features": [
+          "Text analysis for emotion detection",
+          "Dashboard with the emotions results of the analysis",
+          "Use IBM Watson NLU API"
+        ]
       },
       {
         "name": "Jinicuil Consultoría Digital ",
         "subname": "Maintenance of the Jinicuil Consultoría Digital",
         "image": "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/jinicuil2.png?v=1721603489175",
+        "images": [
+          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/jinicuil2.png?v=1721603489175",
+          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/jinicuil.png?v=1721603486615",
+          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/jinicuil3.png?v=1721603490621"
+        ],
         "author": "Inge Gatovsky",
+        "date": "2024-01-01",
         "platform": "Web",
         "stack": ["JavaScript", "Bootstrap", "CSS"],
         "source": "",
         "demo": "https://jinicuil.com/",
-        "description": "Maintenance of the Jinicuil Consultoría Digital  website. Focused on using Bootstrap & JS..."
+        "description": "Maintenance of the Jinicuil Consultoría Digital  website. Focused on using Bootstrap & JS...",
+        "content": "Jinicuil Consultoría Digital is a website focused on providing Fortinent services. The project was focused on the maintenance of the website, updating the information and the design of the website. The website was built using Bootstrap and JavaScript.",
+        "features": [
+          "Update the information of the website",
+          "Update the design of the website",
+          "Update the images of the website"
+        ]
       }
     ]
   }
