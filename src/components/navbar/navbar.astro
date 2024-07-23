@@ -1,12 +1,6 @@
 ---
-import Container from "@components/container.astro";
-import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
-import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
-// import { getImage } from "astro:assets";
-// import logoPath from "../../assets/gatovsky.svg";
-
-// const logo = await getImage({ src: logoPath, format: "image/svg+xml" });
+import { Astronav } from "astro-navbar";
 
 const menuitems = [
   {
@@ -14,11 +8,11 @@ const menuitems = [
     path: "/",
     children: [
       { title: "Projects", path: "/portfolio", target: "_self" },
-      { title: "Curriculum Vitae", path: "/experience", target: "_self"},
+      { title: "Curriculum Vitae", path: "/experience", target: "_self", badge: "UwU"},
       { title: "Hobby", path: "/404", target: "_self"},
       { title: "Social media", path: "/404", target: "_parent" },
     ],
-    badge: "New"
+    badge: "UwU"
   },
   {
     title: "About",
@@ -41,25 +35,81 @@ const menuitems = [
     target: "_self"
   }
 ];
+
+const menulanguages = [
+  {
+    name: "English (US)",
+    code: "en-US",
+    image: "/images/flags/us.svg",
+    url: "#"
+  },
+  {
+    name: "Español (MX)",
+    code: "es-MX",
+    image: "/images/flags/mx.svg",
+    url: "#"
+  },
+  {
+    name: "Deutsch",
+    code: "de",
+    image: "/images/flags/de.svg",
+    url: "#"
+  },
+  {
+    name: "Italiano",
+    code: "it",
+    image: "/images/flags/it.svg",
+    url: "#"
+  },
+  {
+    name: "中文 (繁體)",
+    code: "zh",
+    image: "/images/flags/cn.svg",
+    url: "#"
+  }
+];
 ---
 
-<Container>
-  <header class="flex-col text-xl md:flex md:w-full lg:flex-row content-start justify-between place-content-start items-start my-5">
-    <Astronav>
-      <div class="flex w-full lg:w-fit justify-between">
-        <a href="/">
-          <img
-          src="/images/gatovsky.svg"
-          alt="Inge Gatovsky"
-          class="w-14 h-14 lg:w-16 lg:h-16"
-        />
-        </a>
-        <div class="block lg:hidden">
-          <MenuIcon class="w-10 h-10 text-gray-800" />
-        </div>
+<header>
+  <Astronav>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <div class="pt-4">
+            <img src="/images/gatovsky.svg" class="w-14 h-14 lg:w-16 lg:h-16" loading="eager" alt="Inge Gatovsky" />
+          </div>
+      </a>
+      <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
+          <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+            <img src={menulanguages[0].image} alt={menulanguages[0].code} class="w-5 h-5 rounded-full me-3" aria-hidden="true"/>
+            {menulanguages[0].name}
+          </button>
+          <!-- Dropdown -->
+          <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700" id="language-dropdown-menu">
+            <ul class="py-2 font-medium" role="none">
+              {
+                menulanguages.map((item) => (
+                  <li>
+                    <a href={item.url} class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                      <div class="inline-flex items-center">
+                        <img src={item.image} alt={item.name} aria-hidden="true" class="h-3.5 w-3.5 rounded-full me-2"/>
+                        <span>{item.name}</span>
+                      </div>
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          <button data-collapse-toggle="navbar-language" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-language" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
       </div>
-      <MenuItems class="text-md md:text-xl hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-        <ul class="flex flex-col lg:flex-row lg:gap-3">
+      <div class="text-lg md:text-xl items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-language">
+        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
           {
             menuitems.map((item, index) => (
               <>
@@ -80,7 +130,7 @@ const menuitems = [
                       <span> {item.title}</span>
                       {item.badge && (
                         <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">
-                          New
+                          UwU
                         </span>
                       )}
                     </a>
@@ -90,17 +140,7 @@ const menuitems = [
             ))
           }
         </ul>
-        <!-- <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>Sign up</Link>
-        </div> -->
-      </MenuItems>
-    </Astronav>
-    <!-- <div>
-      <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
       </div>
-    </div> -->
-  </header>
-</Container>
+    </nav>
+  </Astronav>
+</header>
