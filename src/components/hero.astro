@@ -6,8 +6,8 @@ import { Icon } from "astro-icon/components";
 import '../styles/cards.css';
 ---
 
-<main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+<section
+  class="grid lg:grid-cols-2 items-center pt-16 pb-8 md:pt-12 md:pb-24">
   <article class="py-6 md:order-1 hidden md:block rounded-ms">
     <Picture
       src={heroImage}
@@ -24,7 +24,7 @@ import '../styles/cards.css';
     />
   </article>
   <article>
-    <div>
+    <div class="pl-0">
       <h1
         class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
         Inge Gatovsky
@@ -42,14 +42,14 @@ import '../styles/cards.css';
         href="mailto:&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#111;&#64;&#104;&#104;&#97;&#114;&#105;&#101;&#116;&#97;&#46;&#108;&#97;&#116;"
         target="_blank"
         class="flex gap-1 items-center justify-center"
-        rel="noopener">
+        rel="noopener noreferrer">
         <Icon class="font-mplus text-white w-5 h-5" name="bx:bx-at" />
          Contact
       </Link>
       <Link
         size="lg"
         style="outline"
-        rel="noopener"
+        rel="noopener noreferrer"
         href="https://github.com/hharieta"
         class="flex gap-1 items-center justify-center"
         target="_blank">
@@ -58,4 +58,4 @@ import '../styles/cards.css';
       </Link>
     </div>
   </article>
-</main>
+</section>

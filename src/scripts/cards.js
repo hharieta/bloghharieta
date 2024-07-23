@@ -86,12 +86,13 @@ const initEvents = () => {
   cards1.addEventListener("touchstart", () => {
     isMouseDown = true;
     cards1.style.cursor = "grabbing";
-  });
+  },
+  {passive: true});
   cards1.addEventListener("touchend", () => {
     isMouseDown = false;
     cards1.style.cursor = "grab";
   });
-  cards1.addEventListener("touchmove", (e) => isMouseDown && getPosX(e.touches[0].clientX));
+  cards1.addEventListener("touchmove", (e) => isMouseDown && getPosX(e.touches[0].clientX), {passive: true});
 
   window.addEventListener("resize", createCarousel);
 
