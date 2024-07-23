@@ -43,7 +43,7 @@
         "position": "Python Developer",
         "startDate": "2022-11-01",
         "endDate": "2024-02-01",
-        "summary": "As a Python developer, designed cloud infrastructure modules using the Pulumi SDK with Python, also identified and implemented process improvements to improve system performance and efficiency.",
+        "summary": "As a Python developer were designed cloud infrastructure modules using the Pulumi SDK with Python, also identified and implemented process improvements to improve system performance and efficiency.",
         "highlights": [
           "Developed cloud infrastructure modules using the Pulumi SDK with Python, including VPC, EC2, EKS, ALB, IAM, and S3 services.",
           "Identified and implemented process improvements to enhance system performance and efficiency.",
@@ -176,7 +176,7 @@
         "platform": "Web",
         "stack": ["NextJs ", "Aws CDK ", "DynamoDB"],
         "source": "https://github.com/hharieta/aws_crud_archie",
-        "demo": "a",
+        "demo": "",
         "description": "Internal component used by <a style='color: rgb(51 65 85); font-weight: 700;' href='https://www.cloudbuddies.io/' target='_blank'> Archie </a> to store and retrieve data on DynamoDB tables...",
         "content": "This project is a simple CRUD application that uses AWS services to store and retrieve data on DynamoDB. Currently used as a local component for Archie developers side. Based on the public project's Sankharr  repository. Modifications and Enhancements:",
         "features": [
@@ -211,7 +211,7 @@
         ]
       },
       {
-        "name": "Jinicuil Consultoría",
+        "name": "Jinicuil",
         "subname": "Maintenance of the Jinicuil Consultoría Digital",
         "image": "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/jinicuil2.png?v=1721603489175",
         "images": [
