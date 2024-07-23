@@ -68,7 +68,19 @@ const date = formatDate(project.date, "year"); // year, year-month, year-month-d
                 <div class="ms-px">
                   <span class="uppercase bg-fuchsia-200 text-fuchsia-500 border border-fuchsia-300 rounded-md px-1.5 py-0.5">Demo</span>
                 </div>
-                <a href={project.demo} target="_blank" class="hover:text-fuchsia-500">{project.demo}</a>
+                {
+                  project.demo ? (
+                    /^(http|https):\/\/[^\s$.?#].[^\s]*$/.test(project.demo) ? (
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer" class="hover:text-fuchsia-500">
+                        {project.demo}
+                      </a>
+                    ) : (
+                      <span>Not available</span>
+                    )
+                  ) : (
+                    <span>Not available</span>
+                  )
+                }
               </li>
             </ul>
         </div>
@@ -84,7 +96,7 @@ const date = formatDate(project.date, "year"); // year, year-month, year-month-d
                 class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                 loading="eager"
                 alt={project.name}
-              >
+              />
             </div>
             ))
           }
