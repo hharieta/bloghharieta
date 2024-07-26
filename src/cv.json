@@ -156,8 +156,7 @@
       {"name": "simple-icons:amazonapigateway", "level": "40"},
       {"name": "simple-icons:swagger", "level": "30"},
       {"name": "simple-icons:astro", "level": "30"},
-      {"name": "simple-icons:tailwindcss", "level": "70"},
-      {"name": "simple-icons:vim", "level": "40"}
+      {"name": "simple-icons:tailwindcss", "level": "70"}
     ],
     "projects": [
       {
