@@ -28,13 +28,13 @@ const date = formatDate(project.date, "year"); // year, year-month, year-month-d
               </span>
               <h1 class="text-lg md:text-xl md:text-2-xl">{project.name}</h1>
               <div>
-                <span class="text-sm font-medium ml-2 bg-fuchsia-300 text-fuchsia-800 border border-fuchsia-400 rounded-md px-0.5 md:px-1.5 py-0.5">{date}</span>
+                <span class="text-sm font-medium ml-2 bg-blue-200 text-blue-800 border border-blue-300 rounded-md px-0.5 md:px-1.5 py-0.5">{date}</span>
               </div>
             </div>
             <div class="pt-10 pb-10">
-              {project.content}
+              <a set:html={project.content}></a>
             </div>
-            <div class="list-container">
+            <div class="list-container text-slate-500">
               <ul>
                 {
                   project.features.map((feature) => (
@@ -44,43 +44,72 @@ const date = formatDate(project.date, "year"); // year, year-month, year-month-d
               </ul>
             </div>
           </div>
+          <!-- pills -->
           <div class="text-sm font-medium pt-10">
             <ul>
               <li class="grid grid-cols-[2fr_4fr] gap-2 mb-2">
                 <div>
-                  <span class="uppercase bg-fuchsia-300 text-fuchsia-800 border border-fuchsia-400 rounded-md px-1.5 py-0.5">Platform</span>
+                  <span class="uppercase" >Platform</span>
                 </div>
-                <span>{project.platform}</span>
+                <div>
+                  <span class="bg-blue-200 text-blue-800 border border-blue-300 rounded-md px-1.5 py-0.5">{project.platform}</span>
+                </div>
               </li>
               <li class="grid grid-cols-[2fr_4fr] gap-2 mb-2">
                 <div>
-                  <span class="uppercase bg-fuchsia-300 text-fuchsia-800 border border-fuchsia-400 rounded-md px-1.5 py-0.5">Stack</span>
+                  <span class="uppercase" >Stack</span>
                 </div>
-                <span>
+                <div>
                     {
                       project.stack.map((item) => (
-                        <span class="mr-4">{item}</span>
+                        <span class="bg-blue-200 text-blue-800 border border-blue-300 rounded-md px-1.5 py-0.5 mr-4">{item}</span>
                       ))
                     }
-                </span>
+                </div>
               </li>
               <li class="grid grid-cols-[2fr_4fr] gap-2 mb-2">
                 <div class="ms-px">
-                  <span class="uppercase bg-fuchsia-300 text-fuchsia-800 border border-fuchsia-400 rounded-md px-1.5 py-0.5">Demo</span>
+                  <span class="uppercase">Demo</span>
                 </div>
                 {
                   project.demo ? (
                     /^(http|https):\/\/[^\s$.?#].[^\s]*$/.test(project.demo) ? (
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer" class="hover:text-fuchsia-500">
+                      <div>
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer" class="bg-blue-200 text-blue-800 border border-blue-300 rounded-md px-1.5 py-0.5 hover:text-blue-400">
                         {project.demo}
                       </a>
+                    </div>
                     ) : (
-                      <span>Not available</span>
+                      <div>
+                        <span class=" bg-blue-200 text-blue-800 border border-blue-300 rounded-md px-1.5 py-0.5">Not available</span>
+                      </div>
                     )
                   ) : (
-                    <span>Not available</span>
+                    <div>
+                      <span class="bg-blue-200 text-blue-800 border border-blue-300 rounded-md px-1.5 py-0.5">Not available</span>
+                    </div>
                   )
                 }
+              </li>
+              <li class="grid grid-cols-[2fr_4fr] gap-2 mb-2">
+                <div>
+                  <span class="uppercase">Source</span>
+                </div>
+                <div>
+                  {
+                    project.source ? (
+                      /^(http|https):\/\/[^\s$.?#].[^\s]*$/.test(project.source) ? (
+                        <a href={project.source} target="_blank" rel="noopener noreferrer" class="bg-blue-200 text-blue-800 border border-blue-300 rounded-md px-1.5 py-0.5 hover:text-blue-300 hover:bg-blue-800">
+                          {project.source}
+                        </a>
+                      ) : (
+                        <span class="bg-blue-200 text-blue-800 border border-blue-300 rounded-md px-1.5 py-0.5">Not available</span>
+                      )
+                    ) : (
+                      <span class="bg-blue-200 text-blue-800 border border-blue-300 rounded-md px-1.5 py-0.5">Not available</span>
+                    )
+                  }
+                </div>
               </li>
             </ul>
         </div>

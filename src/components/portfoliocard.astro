@@ -37,8 +37,8 @@ const slug = name.toLowerCase().replace(/\s+/g, '-');
       <div class="description  text-balance">
         <h1>{name}</h1>
         <h2 class="font-handlee text-slate-600">{subname}</h2>
-        <p set:html={description}></p>
-        <p class="read-more font-semibold">
+        <p set:html={description} class="text-slate-500"></p>
+        <p class=" font-mplus read-more font-semibold">
           <a href={`/portfolio/${slug}`}>
             Read More
           </a>
@@ -51,7 +51,7 @@ const slug = name.toLowerCase().replace(/\s+/g, '-');
   display: flex;
   flex-direction: column;
   margin: 1rem auto;
-  box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.2);
   margin-bottom: 1.6%;
   background: #fff;
   line-height: 1.4;
@@ -152,7 +152,7 @@ const slug = name.toLowerCase().replace(/\s+/g, '-');
   text-align: right;
 }
 .blog-card .description .read-more a {
-  color: rgb(51 65 85); /* slate-700 */
+  color: rgb(30 41 59); /* slate-800 */
   display: inline-block;
   position: relative;
 }
@@ -178,7 +178,7 @@ const slug = name.toLowerCase().replace(/\s+/g, '-');
   content: "";
   position: absolute;
   height: 5px;
-  background: rgb(51 65 85); /* slate-700 */
+  background: rgb(71 85 105); /* slate-600 */
   width: 35px;
   top: -0.75rem;
   border-radius: 3px;

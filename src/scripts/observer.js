@@ -1,6 +1,6 @@
 // observer.js
 document.addEventListener("DOMContentLoaded", function() {
-    const sections = document.querySelectorAll('.cv-section');
+    const sections = document.querySelectorAll('.s-animation');
   
     const observerOptions = {
       threshold: 0.1,

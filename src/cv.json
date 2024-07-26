@@ -156,8 +156,7 @@
       {"name": "simple-icons:amazonapigateway", "level": "40"},
       {"name": "simple-icons:swagger", "level": "30"},
       {"name": "simple-icons:astro", "level": "30"},
-      {"name": "simple-icons:tailwindcss", "level": "70"},
-      {"name": "simple-icons:vim", "level": "40"}
+      {"name": "simple-icons:tailwindcss", "level": "70"}
     ],
     "projects": [
       {
@@ -177,8 +176,8 @@
         "stack": ["NextJs ", "Aws CDK ", "DynamoDB"],
         "source": "https://github.com/hharieta/aws_crud_archie",
         "demo": "",
-        "description": "Internal component used by <a style='color: rgb(51 65 85); font-weight: 700;' href='https://www.cloudbuddies.io/' target='_blank'> Archie </a> to store and retrieve data on DynamoDB tables...",
-        "content": "This project is a simple CRUD application that uses AWS services to store and retrieve data on DynamoDB. Currently used as a local component for Archie developers side. Based on the public project's Sankharr  repository. Modifications and Enhancements:",
+        "description": "Internal component used by <a style='color: rgb(30 41 59); font-weight: 600;' href='https://www.cloudbuddies.io/' target='_blank'> Archie </a> to store and retrieve data on DynamoDB tables...",
+        "content": "This project is a CRUD application that uses AWS CDK and NextJS to store and retrieve data on DynamoDB. Currently used as a local component for Archie developers side. Based on the public project's <a style='color: rgb(37 99 235); font-weight: 600;' href='https://github.com/sankharr/aws_crud' target='_blank'> Sankharr </a>  repository. Modifications and Enhancements:",
         "features": [
           "Allows you to choose the name of the table to be created.",
           "Allows you to select the name of the table to which data will be appended.",
