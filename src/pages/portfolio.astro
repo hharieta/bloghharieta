@@ -13,7 +13,7 @@ const {projects} = cv;
       <Fragment slot="title">Gatovsky's Projects</Fragment>
       <Fragment slot="desc"></Fragment>
     </Sectionhead>
-    <section class="w-full flex flex-col content-center items-center mt-16">
+    <!-- <section class="w-full flex flex-col content-center items-center mt-16">
       <div class="w-full min-h-full max-w-2xl flex flex-col items-start gap-3f">
         {
           projects.map((project) => (
@@ -21,6 +21,33 @@ const {projects} = cv;
           ))
         }
       </div>
+    </section> -->
+    <section class="flex flex-col items-center animate opacity-0 transform translate-y-12 transition-opacity duration-700 ease-out">
+          {
+            projects.map((project) => (
+              <PortfolioCard {...project} />
+            ))
+          }
     </section>
   </Container>
 </Layout>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.animate');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('translate-y-0', 'opacity-100');
+          entry.target.classList.remove('translate-y-12', 'opacity-0');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elements.forEach(element => {
+      observer.observe(element);
+    });
+  });
+</script>
