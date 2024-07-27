@@ -16,11 +16,11 @@ const date = formatDate(project.date, "year"); // year, year-month, year-month-d
 
 <Layout title={project.name}>
   <Container>
-    <section class="w-full flex flex-col content-center items-center mt-16">
+    <section class="w-full flex flex-col content-center items-center mt-16 ">
       <div class="w-full min-h-full max-w-2xl flex flex-col items-start gap-3">
           <div class="content-center">
             <div class="flex content-center items-center">
-              <a href="/portfolio">Back</a>
+              <a href="/portfolio" class="transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-110">Back</a>
               <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
                   <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m10 17l5-5m0 0l-5-5" />
@@ -34,15 +34,13 @@ const date = formatDate(project.date, "year"); // year, year-month, year-month-d
             <div class="pt-10 pb-10">
               <a set:html={project.content}></a>
             </div>
-            <div class="list-container text-slate-500">
-              <ul>
+              <ul class="custom-list pl-5">
                 {
                   project.features.map((feature) => (
-                    <li>{feature}</li>
+                    <li class="text-muted-foreground text-slate-500 text-md sm:text-normal pb-2">{feature}</li>
                   ))
                 } 
               </ul>
-            </div>
           </div>
           <!-- pills -->
           <div class="text-sm font-medium pt-10">
@@ -62,7 +60,9 @@ const date = formatDate(project.date, "year"); // year, year-month, year-month-d
                 <div>
                     {
                       project.stack.map((item) => (
-                        <span class="bg-blue-200 text-blue-800 border border-blue-300 rounded-md px-1.5 py-0.5 mr-4">{item}</span>
+                        <div class="inline-block py-1">
+                          <span class="bg-blue-200 text-blue-800 border border-blue-300 rounded-md px-1.5 py-0.5 mr-4">{item}</span>
+                        </div>
                       ))
                     }
                 </div>
@@ -100,7 +100,7 @@ const date = formatDate(project.date, "year"); // year, year-month, year-month-d
                     project.source ? (
                       /^(http|https):\/\/[^\s$.?#].[^\s]*$/.test(project.source) ? (
                         <a href={project.source} target="_blank" rel="noopener noreferrer" class="bg-blue-200 text-blue-800 border border-blue-300 rounded-md px-1.5 py-0.5 hover:text-blue-300 hover:bg-blue-800">
-                          {project.source}
+                          {project.name}
                         </a>
                       ) : (
                         <span class="bg-blue-200 text-blue-800 border border-blue-300 rounded-md px-1.5 py-0.5">Not available</span>
@@ -155,22 +155,8 @@ const date = formatDate(project.date, "year"); // year, year-month, year-month-d
 
 
 <style>
-  .list-container {
-  display: flex;
-  flex-direction: column;
-  padding-left: 0;
-}
 
-.list-container ul {
-  list-style: url('/images/bullet.svg');
-  padding-left: 1rem;
-}
-
-.list-container li {
-  margin-bottom: 0.5em; /* Ajusta el espacio entre los ítems de la lista */
-  padding-left: 0.5em; /* Ajusta la indentación del texto */
-  text-indent: 0; /* Ajusta la indentación negativa para alinear el texto */
-  line-height: 1.5; /* Mejora la legibilidad */
-}
-
+.custom-list {
+    list-style-image: url('/images/bullet.svg');
+  }
 </style>
