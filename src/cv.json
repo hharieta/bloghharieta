@@ -249,7 +249,7 @@
     ],
     "Resources": [
       {
-        "name": "Emotion Analyzer",
+        "name": "Build an API",
         "url": "https://github.com/hharieta/fastapi-watson-nlu"
       },
       {
