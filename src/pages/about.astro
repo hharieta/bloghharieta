@@ -1,16 +1,15 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
 import '../styles/aboutcard.css';
-import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
-import Link from "@components/ui/link.astro";
+
 
 import cv from "@cv"
 const {basics} = cv;
-const {name, label, summary, socials, location, about} = basics;
+const {name, label, summary, location, about} = basics;
 const {city, countryCode} = location;
+
+const cvVitae = "/hharieta2024v2.pdf"
 
 
 ---
@@ -21,7 +20,8 @@ const {city, countryCode} = location;
       <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <div class="flex justify-end px-4 pt-4">
             <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
-                <span class="sr-only">Open dropdown</span>
+              <span class="animate-ping absolute -ml-3 -mt-[0.2rem] inline-flex h-6 w-6 rounded-md bg-slate-400 opacity-75"></span>  
+              <span class="sr-only">Open dropdown</span>
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
                     <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
                 </svg>
@@ -30,19 +30,27 @@ const {city, countryCode} = location;
             <div id="dropdown" class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                 <ul class="py-2" aria-labelledby="dropdownButton">
                 <li>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                    <a 
+                    href="https://drive.google.com/file/d/13eimOKXWzzApAIlAm54H_mmliJbBpKTq/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                    Dowload CV
+                  </a>
                 </li>
                 <li>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export Data</a>
-                </li>
-                <li>
-                    <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                    <a 
+                    href="https://www.linkedin.com/in/hharieta/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                    Connect on LinkedIn</a>
                 </li>
                 </ul>
             </div>
         </div>
         <div class="flex flex-col items-center pb-10">
-            <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="/images/gatovsky.jpeg" alt="Bonnie image"/>
+            <Image width={120} height={120} loading="eager" class="mb-3 rounded-full shadow-lg" src="/images/gatovsky.jpeg" alt="Gatovsky"/>
             <h2 class="font-mplus mb-1 text-xl font-bold text-gray-900 dark:text-white">{name}</h2>
             <span class="text-sm text-gray-500 dark:text-gray-400">{label}</span>
             <div class="flex mt-4 md:mt-6">
@@ -71,19 +79,12 @@ const {city, countryCode} = location;
         He is currently passionately collaborating on the <a href="https://cloudbuddies.io/" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-800 hover:text-slate-600">Archie by Cloudbuddies</a> project, which is an initiative that aims to facilitate the provisioning of resources in the cloud so that it is accessible to anyone without the need for cloud expertise.
       </p>
     </section>
-    <section class="relative w-screen h-full md:h-screen overflow-hidden top-20">
-      <div class="parallax-bg  top-0 left-0 w-screen h-full md:h-screen lg:h-screen  bg-cover bg-center bg-fixed content-center items-center text-center"
-       style="background-image: url('/images/background.jpeg');">
-       <div class="flex flex-col content-center items-center">
-        <Image 
-          src="/images/gatovsky.svg" 
-          width={10} height={10} 
-          loading="eager" alt="gatovsky-logo" 
-          class="pb-0 mb-0 opacity-35 w-1/4 md:w-1/6" />
-        <h1 class="pt-0 text-4xl md:text-6xl font-bold text-stone-800 opacity-75">{name}</h1>
-        <p class="text-xl md:text-xl text-stone-800 font-black font-handlee opacity-75">{label}</p>
-        <p class="text-lg md:text-xl text-stone-800 font-black font-handlee opacity-75">{city}, {countryCode}</p>
-       </div>
+    <section class="relative w-screen h-full overflow-hidden p-10 mt-20 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
+      <div class="flex flex-col items-center text-center space-y-4">
+        <Image src="/images/gatovsky.svg" width="50" height="50" alt="gatovsky-logo" loading="eager" class="opacity-80 w-1/4 md:w-1/6" />
+        <h1 class="text-4xl md:text-6xl font-bold text-stone-800 opacity-90">{name}</h1>
+        <p class="text-xl md:text-2xl text-stone-800 font-semibold opacity-90">{label}</p>
+        <p class="text-lg md:text-xl text-stone-800 font-medium opacity-90">{city}, {countryCode}</p>
       </div>
     </section>
     <section class="flex pt-36 mx-5 pb-4 content-center items-center justify-center">
@@ -91,15 +92,10 @@ const {city, countryCode} = location;
         {
           about.map((item) => (
           <div class="max-w-sm bg-white border mb-6 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-              <img class="rounded-t-lg" src={item.image} alt="" />
-            </a>
+              <Image width={1000} height={1000} class="rounded-t-lg" src={item.image} alt={item.alt} />
             <div class="p-5">
-              <a href="#">
-                  <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{item.title}</h2>
-              </a>
+              <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{item.title}</h2>
               <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{item.content}</p>
-              
             </div>
           </div>
           ))
