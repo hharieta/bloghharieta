@@ -3,12 +3,11 @@ import { Picture } from "astro:assets";
 import heroImage from "@assets/gatovsky.webp";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
-import '../styles/cards.css';
 ---
 
 <section
-  class="grid lg:grid-cols-2 items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <article class="py-6 md:order-1 hidden md:block rounded-ms">
+  class="flex items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <article class="py-6 md:order-1 w-full hidden md:inline-block rounded-ms">
     <Picture
       src={heroImage}
       alt="Inge Gatovsky"
@@ -23,7 +22,7 @@ import '../styles/cards.css';
        }}
     />
   </article>
-  <article>
+  <article class="w-full">
     <div class="pl-0">
       <h1
         class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
