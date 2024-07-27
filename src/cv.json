@@ -13,15 +13,21 @@
       "about":[
         {
           "title": "Professional Background",
+          "image": "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/cloud.jpg?v=1722105010319",
+          "alt": "Cloud",
           "content": "He is a cloud engineer with experience in developing cloud infrastructure modules using the Pulumi SDK with Python. He has a solid foundation in Python and is proficient in Docker, Bash and Kubernetes. He's an expert in AWS cloud services including VPC, EC2, EKS, ALB, IAM, Lambda, API Gateway and S3."
         },
         {
           "title": "Achievements",
+          "image": "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/pngtree-golden-achievement-unlocked-celebrating-your-success-on-a-blue-3d-background-image_3808269.jpg?v=1722104774566",
+          "alt": "Achievements",
           "content": "He has achieved several awards and recognitions, including 1st place in the Competitive Programming contest at ITCancun in 2023 and 3rd place in the Genius Arena - Jalisco Talent Land 2024. He has also taken several courses in Python, Docker and Data Science, obtaining certifications from IBM, Cisco and the University of Michigan."
         },
         {
           "title": "Career Goals",
-          "content": "he's seeking a challenging position as a Cloud Engineer where can leverage his skills and experience to develop innovative cloud solutions. An passionate about technology and committed to continuous learning and professional development."
+          "image": "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/top-7-steps-to-decide-the-right-career-path-ccr9-article.avif?v=1722104774934",
+          "alt": "Career Goals",
+          "content": "He's seeking a challenging position as a Cloud Engineer where can leverage his skills and experience to develop innovative cloud solutions. An passionate about technology and committed to continuous learning and professional development."
         }
       ],
       "favoriteImages": [
@@ -252,12 +258,12 @@
     ],
     "Resources": [
       {
-        "name": "Build an API",
+        "name": "API with FastAPI",
         "url": "https://github.com/hharieta/fastapi-watson-nlu"
       },
       {
-        "name": "Python",
-        "url": "https://www.python.org/"
+        "name": "Cloud Self-Service Portal",
+        "url": "https://cloudbuddies.io/"
       },
       {
         "name": "Docker",

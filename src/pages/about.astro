@@ -1,91 +1,106 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
 import '../styles/aboutcard.css';
-import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
-import Link from "@components/ui/link.astro";
+
 
 import cv from "@cv"
 const {basics} = cv;
-const {name, label, summary, socials, location, about} = basics;
+const {name, label, summary, location, about} = basics;
 const {city, countryCode} = location;
-const CDN_IMAGE = import.meta.env.CDN_URL;
+
+const cvVitae = "/hharieta2024v2.pdf"
 
 
 ---
 
 <Layout title="About">
-   <Container>
-    <Sectionhead>
-      <Fragment slot="title">Who is him?</Fragment>
-      <Fragment slot="desc"></Fragment>
-    </Sectionhead>
-    <section class="w-full md:w-xl content-section">
-      <h1 class="text-2xl md:text-4xl"> {name} </h1>
-      <div class="content">
-        <p set:html={summary}></p>
-        <!-- <a href="">Learn more</a> -->
-      </div>
-      <div class="img ">
-        <Image src="/images/gatovsky.jpeg" alt="gatovsky" width={800} height={800} loading="eager" />
-        <a
-          class="bg-black text-white no-underline py-1 px-1.5 text-xs font-bold leading-snug inline-block rounded"
-          href="https://www.instagram.com/inge.gatovsky/"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Inge Gatovsky"
-        >
-          <span class="inline-flex content-center items-center py-0.5 px-0.75">
-            <Icon class="font-mplus text-white h-5 w-5 " name="bx:bxl-instagram" />
-            {name}
-          </span>
-        </a>
+
+    <section class="flex flex-col pt-10 md:w-xl m-5 content-center items-center">
+      <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class="flex justify-end px-4 pt-4">
+            <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+              <span class="animate-ping absolute -ml-3 -mt-[0.2rem] inline-flex h-6 w-6 rounded-md bg-slate-400 opacity-75"></span>  
+              <span class="sr-only">Open dropdown</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                    <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdown" class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                <ul class="py-2" aria-labelledby="dropdownButton">
+                <li>
+                    <a 
+                    href="https://drive.google.com/file/d/13eimOKXWzzApAIlAm54H_mmliJbBpKTq/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                    Dowload CV
+                  </a>
+                </li>
+                <li>
+                    <a 
+                    href="https://www.linkedin.com/in/hharieta/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                    Connect on LinkedIn</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex flex-col items-center pb-10">
+            <Image width={120} height={120} loading="eager" class="mb-3 rounded-full shadow-lg" src="/images/gatovsky.jpeg" alt="Gatovsky"/>
+            <h2 class="font-mplus mb-1 text-xl font-bold text-gray-900 dark:text-white">{name}</h2>
+            <span class="text-sm text-gray-500 dark:text-gray-400">{label}</span>
+            <div class="flex mt-4 md:mt-6">
+                <a 
+                href="https://github.com/hharieta" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-slate-700 rounded-lg hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800"
+                >GitHub
+              </a>
+                <a 
+                href="mailto:&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#111;&#64;&#104;&#104;&#97;&#114;&#105;&#101;&#116;&#97;&#46;&#108;&#97;&#116;"
+                class="py-2 px-4 ms-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-slate-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                Email
+              </a>
+            </div>
+        </div>
       </div>
     </section>
-    </Container>
-    <section class="relative w-screen h-full md:h-screen overflow-hidden top-20">
-      <div class="parallax-bg  top-0 left-0 w-screen h-full md:h-screen lg:h-screen  bg-cover bg-center bg-fixed content-center items-center text-center"
-       style="background-image: url('/images/background.jpeg');">
-       <div class="flex flex-col content-center items-center">
-        <Image 
-          src="/images/gatovsky.svg" 
-          width={10} height={10} 
-          loading="eager" alt="gatovsky-logo" 
-          class="pb-0 mb-0 opacity-35 w-1/4 md:w-1/6" />
-        <h1 class="pt-0 text-4xl md:text-6xl font-bold text-stone-800 opacity-75">{name}</h1>
-        <p class="text-xl md:text-xl text-stone-800 font-black font-handlee opacity-75">{label}</p>
-        <p class="text-lg md:text-xl text-stone-800 font-black font-handlee opacity-75">{city}, {countryCode}</p>
-       </div>
+    <section class="flex flex-col content-center items-center pt-5 mx-5 md:mx-28 lg:mx-52">
+
+      <p class="mb-3 text-gray-500 dark:text-gray-400 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:me-3 first-letter:float-start"> 
+        Gatovsky {summary}
+      </p>
+      <p class="text-gray-500 dark:text-gray-400">
+        He is currently passionately collaborating on the <a href="https://cloudbuddies.io/" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-800 hover:text-slate-600">Archie by Cloudbuddies</a> project, which is an initiative that aims to facilitate the provisioning of resources in the cloud so that it is accessible to anyone without the need for cloud expertise.
+      </p>
+    </section>
+    <section class="relative w-screen h-full overflow-hidden p-10 mt-20 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
+      <div class="flex flex-col items-center text-center space-y-4">
+        <Image src="/images/gatovsky.svg" width="50" height="50" alt="gatovsky-logo" loading="eager" class="opacity-80 w-1/4 md:w-1/6" />
+        <h1 class="text-4xl md:text-6xl font-bold text-stone-800 opacity-90">{name}</h1>
+        <p class="text-xl md:text-2xl text-stone-800 font-semibold opacity-90">{label}</p>
+        <p class="text-lg md:text-xl text-stone-800 font-medium opacity-90">{city}, {countryCode}</p>
       </div>
     </section>
-    <Container>
-    <section class="max-w-screen-xl mx-auto pt-32 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      {
-        about.map((item) => (
-          <div class="bg-gradient-to-r from-sky-200 to-indigo-400 hover:bg-gradient-to-r hover:from-violet-200 hover:to-fuchsia-400 rounded-lg shadow-lg p-6 transition-all duration-300">
-            <h2 class="text-xl font-bold mb-2">{item.title}</h2>
-            <p class="text-gray-700 mb-4 mt-4">{item.content}</p>
+    <section class="flex pt-36 mx-5 pb-4 content-center items-center justify-center">
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        {
+          about.map((item) => (
+          <div class="max-w-sm bg-white border mb-6 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <Image width={1000} height={1000} class="rounded-t-lg" src={item.image} alt={item.alt} />
+            <div class="p-5">
+              <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{item.title}</h2>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{item.content}</p>
+            </div>
           </div>
-        ))
-      }
+          ))
+        }
+      </div>
     </section>
-    <div class="w-full flex flex-col md:flex-row gap-3  content-center items-center justify-center mt-10">
-      {
-        socials.map((social) => (
-          <div class="rounded-lg w-1/2 md:w-2/12 md:rounded-full">
-          <Link
-            href={social.url}
-            target="_blank"
-            class="flex gap-1 items-center justify-center"
-            rel="noopener noreferrer">
-            <Icon class="font-mplus rounded-full w-4 h-4" name={social.name} />
-            {social.network}
-          </Link>
-          </div>
-        ))
-      }
-  </div>
-  </Container>
+    
 </Layout>
