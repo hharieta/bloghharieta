@@ -119,6 +119,13 @@
       ],
       "socials": [
       {
+        "network": "Facebook",
+        "label": "Facebook",
+        "username": "Caballero de los Poemas Chafas",
+        "url": "https://www.facebook.com/Cavaller.hector",
+        "name": "bx:bxl-facebook-circle"
+      },
+      {
         "network": "GitHub",
         "label": "GitHub",
         "username": "hharieta",
@@ -239,5 +246,24 @@
           "Update the images of the website"
         ]
       }
+    ],
+    "Resources": [
+      {
+        "name": "Emotion Analyzer",
+        "url": "https://github.com/hharieta/fastapi-watson-nlu"
+      },
+      {
+        "name": "Python",
+        "url": "https://www.python.org/"
+      },
+      {
+        "name": "Docker",
+        "url": "https://www.docker.com/"
+      },
+      {
+        "name": "Pulumi",
+        "url": "https://www.pulumi.com/"
+      }
+      
     ]
   }
