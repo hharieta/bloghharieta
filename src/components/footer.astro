@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
 import cv from '@cv'
 
@@ -13,10 +14,12 @@ const resources = cv.Resources
         <a href="https://www.hharieta.lat" class="flex items-center">
           <div class="flex h-40 content-start items-center">
             <div class="pt-6">
-              <img
+              <Image
                 src="/images/gatovsky.svg"
                 loading="eager"
-                class="mr-3 h-24"
+                class="mr-3"
+                width={96}
+                height={96}
                 alt="Inge Gatovsky Logo"
               />
             </div>

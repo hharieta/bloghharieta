@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import cv from "@cv";
 
 const basics = cv.basics;
@@ -31,7 +32,13 @@ const {favoriteImages} = basics;
       {
         favoriteImages.map((image, index) => (
           <div class={`hidden duration-700 ease-in-out ${index === 0 ? 'block' : ''}`} data-carousel-item>
-            <img src={image} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt={`favorite-${index}`} />
+            <Image 
+            src={image}
+            width={1000}
+            loading={"eager"}
+            height={1000}
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" 
+            alt={`favorite-${index}`} />
           </div>
         ))
       }
