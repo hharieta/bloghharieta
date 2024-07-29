@@ -211,25 +211,28 @@
       },
       {
         "name": "Emotion Analyzer",
-        "subname": "Flask API for IBM Watson NLU",
-        "image": "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/watson1.png?v=1721587273464",
+        "subname": "API Call for IBM Watson NLU service",
+        "image": "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/Screenshot%202024-07-29%20at%203.24.19%E2%80%AFp.m..png?v=1722285569901",
         "images": [
-          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/watson1.png?v=1721587273464", 
-          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/watson2.png?v=1721587274936",
-          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/watson3.png?v=1721587275673"
+          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/Screenshot%202024-07-29%20at%203.23.41%E2%80%AFp.m..png?v=1722285569338", 
+          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/Screenshot%202024-07-29%20at%203.37.16%E2%80%AFp.m..png?v=1722285570866",
+          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/Screenshot%202024-07-29%20at%203.24.19%E2%80%AFp.m..png?v=1722285569901",
+          "https://cdn.glitch.global/f8dc0126-7e62-42eb-b9b3-c1d569626a06/Screenshot%202024-07-29%20at%203.24.33%E2%80%AFp.m..png?v=1722285570377"
         ],
         "author": "Inge Gatovsky",
         "date": "2024-01-01",
         "platform": "Web",
-        "stack": ["Flask ", "IBM Watson", "NLU"],
-        "source": "https://github.com/hharieta/aws_crud_archie",
+        "stack": ["NextJs", "FastAPI", "IBM Watson NLU", "TailwindCSS"],
+        "source": ["https://github.com/hharieta/fastapi-watson-nlu"],
         "demo": "",
-        "description": "Final project for the IBM course Developing AI Applications with Python and Flask...",
-        "content": "Emotion Analyzer is a final project for the IBM course Developing AI Applications with Python and Flask  which one explore the emotions analysis powered by IBM Watson Service AI. this project aims to decipher and analyze the emotional tone within input text.",
+        "description": "FastAPI and Next.js technologies to create a web application to analyze...",
+        "content": "Emotion Analyzer combines FastAPI and Next.js technologies to create a web application to analyze emotions in texts using IBM Watson NLU. The results of the analysis are described in a dashboard with the key parts of the analysis. It is designed to offer a smooth user experience and provide an analysis of sentiments, entities and dominant emotions in the provided text in a short time.",
         "features": [
-          "Text analysis for emotion detection",
-          "Dashboard with the emotions results of the analysis",
-          "Use IBM Watson NLU API"
+          "Implemented with FastAPI, known for its high performance and ease of use.",
+          "Developed with Next.js to offer fast and efficient navigation.",
+          "It presents the results of the analysis in a clear and understandable way using interactive graphics.",
+          "Supports input validation to ensure that texts are within the allowed range.",
+          "Protection against DDoS attacks by protecting API calls for a time limit."
         ]
       },
       {
