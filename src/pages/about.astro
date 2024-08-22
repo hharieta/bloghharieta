@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 
 import cv from "@cv"
 const {basics} = cv;
-const {name, label, summary, location, about} = basics;
+const {name, label, location, about} = basics;
 const {city, countryCode} = location;
 
 
@@ -29,7 +29,7 @@ const {city, countryCode} = location;
                 <ul class="py-2" aria-labelledby="dropdownButton">
                 <li>
                     <a 
-                    href="https://drive.google.com/file/d/13eimOKXWzzApAIlAm54H_mmliJbBpKTq/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1oPJ9zvKfK3H6sWZDSEOpZNkEbwjOHr2y/view?usp=drive_link"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
@@ -68,10 +68,10 @@ const {city, countryCode} = location;
         </div>
       </div>
     </section>
-    <section class="flex flex-col content-center items-center pt-5 mx-5 md:mx-28 lg:mx-52">
+    <section class="flex flex-col content-center items-center pt-5 px-5 max-w-screen-lg mx-auto md:px-20 lg:px-32">
 
-      <p class="mb-3 text-gray-500 dark:text-gray-400 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:me-3 first-letter:float-start"> 
-        Gatovsky {summary}
+      <p class="mb-3 text-gray-500 dark:text-gray-400 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:me-3 first-letter:float-start text-justify"> 
+        Gatovsky is a dedicated student pursuing a degree in Systems Engineering from Mexico. Python is his favorite language and which he masters best, he performs optimally in the use of technologies such as Docker, Pulumi SDK, Bash and K8S integrated with AWS cloud services. He's passionate about Machine Learning and Linux systems, always eager to learn new skills and technologies.
       </p>
       <p class="text-gray-500 dark:text-gray-400">
         He is currently passionately collaborating on the <a href="https://cloudbuddies.io/" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-800 hover:text-slate-600">Archie by Cloudbuddies</a> project, which is an initiative that aims to facilitate the provisioning of resources in the cloud so that it is accessible to anyone without the need for cloud expertise.

@@ -45,12 +45,11 @@
         "position": "Cloud Engineer",
         "startDate": "2024-02-01",
         "endDate": null,
-        "summary": "As a Cloud Engineer were wrote modules to deploy resources in the AWS cloud. Some of the tasks performed were testing code made by other teammates and integrating them into the repository.",
+        "summary": "As a Cloud Engineer, implemented AWS solutions that streamlined the team's workflow, including:",
         "highlights": [
-          "Automated development environments using Docker and Bash, enhancing efficiency for developers.",
-          "Deployed APIs utilizing API Gateway and AWS Lambda to streamline application performance.",
-          "Refactored code and integrated updates into the project repository to improve codebase maintainability.",
-          "Resolved Git conflicts to facilitate smooth collaboration and version control.",
+          "Design of a REST API with AWS Lambda, Cognito and API Gateway to optimize the frontend by delivering pre-filtered elements,",
+          "ECR usage for managing private and customized Docker images,",
+          "Utilization of CloudWatch for monitoring and log analysis, enabling efficient identification and resolution of execution errors.",
           "Reviewed and approved pull requests, ensuring adherence to coding standards and project requirements."
         ]
       },
@@ -58,12 +57,25 @@
         "company": "Cloudbuddies",
         "position": "Python Developer",
         "startDate": "2022-11-01",
-        "endDate": "2024-02-01",
-        "summary": "As a Python developer were designed cloud infrastructure modules using the Pulumi SDK with Python, also identified and implemented process improvements to improve system performance and efficiency.",
+        "endDate": null,
+        "summary": "Contributed to backend system optimization, as well as the management and documentation of the GitHub repository. Key tasks include:",
         "highlights": [
-          "Developed cloud infrastructure modules using the Pulumi SDK with Python, including VPC, EC2, EKS, ALB, IAM, and S3 services.",
-          "Identified and implemented process improvements to enhance system performance and efficiency.",
-          "Developed and maintained repository documentation to ensure clear communication and alignment within the team."
+          "Leading the organization and creation of IaC modules with Pulumi/Python, implementing an efficient design that enhances reusability,",
+          "Managing and handling core system errors to improve stability,",
+          "Setting up development environments with Bash, PowerShell and Docker to optimize the team's workflow,",
+          "Resolved Git conflicts to facilitate smooth collaboration and version control."
+        ]
+      },
+      {
+        "company": "Jinicuil Consultoría Digital",
+        "position": "Web Developer",
+        "startDate": "2024-05-01",
+        "endDate": "2024-10-01",
+        "summary": "Developed a static website, aligned with the client's needs for the promotion of services and contact. Notable tasks include:",
+        "highlights": [
+          "Design and development using HTML, CSS and Bootstrap,",
+          "Deploy the site to GitHub Pages with CNAMES configuration for the custom domain,",
+          "Implementation of a detailed services section and a contact form for clients."
         ]
       }],
       "education": [{
